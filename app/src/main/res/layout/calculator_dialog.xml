@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.xzy.forestSystem.gogisapi.MyControls.ExpressEditText android:gravity="right|center_vertical|center_horizontal|center" android:id="@+id/expressEditText" android:scrollbars="vertical" android:clickable="false" android:layout_width="match_parent" android:layout_height="90dp" android:layout_margin="5dp" android:hint="计算表达式" android:cursorVisible="false" android:minLines="3" android:singleLine="false" android:inputType="textMultiLine"/>
+        <EditText android:enabled="true" android:gravity="right|center_vertical|center_horizontal|center" android:id="@+id/et_calResult" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="10dp" android:hint="计算结果" android:ems="10" android:inputType="none"/>
+        <TableLayout android:id="@+id/innerkeyboard" android:layout_width="match_parent" android:layout_height="wrap_content" android:stretchColumns="*">
+            <TableRow android:gravity="right" android:orientation="horizontal">
+                <Button android:textSize="25sp" android:id="@+id/backspace" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_span="2" android:text="←"/>
+                <Button android:textSize="25sp" android:id="@+id/clear" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_span="2" android:text="清除"/>
+            </TableRow>
+            <TableRow android:orientation="horizontal">
+                <Button android:textSize="20sp" android:id="@+id/pi" android:layout_width="match_parent" android:layout_height="match_parent" android:text="π"/>
+                <Button android:textSize="25sp" android:textColor="@color/myBlueColor" android:id="@+id/num7" android:layout_width="match_parent" android:layout_height="match_parent" android:text="7"/>
+                <Button android:textSize="25sp" android:textColor="@color/myBlueColor" android:id="@+id/num8" android:layout_width="match_parent" android:layout_height="match_parent" android:text="8"/>
+                <Button android:textSize="25sp" android:textColor="@color/myBlueColor" android:id="@+id/num9" android:layout_width="match_parent" android:layout_height="match_parent" android:text="9"/>
+                <Button android:textSize="25sp" android:textColor="@color/myRedColor" android:id="@+id/add" android:layout_width="match_parent" android:layout_height="match_parent" android:text="+"/>
+            </TableRow>
+            <TableRow android:orientation="horizontal">
+                <Button android:textSize="20sp" android:id="@+id/e" android:layout_width="match_parent" android:layout_height="match_parent" android:text="e"/>
+                <Button android:textSize="25sp" android:textColor="@color/myBlueColor" android:id="@+id/num4" android:layout_width="match_parent" android:layout_height="match_parent" android:text="4"/>
+                <Button android:textSize="25sp" android:textColor="@color/myBlueColor" android:id="@+id/num5" android:layout_width="match_parent" android:layout_height="match_parent" android:text="5"/>
+                <Button android:textSize="25sp" android:textColor="@color/myBlueColor" android:id="@+id/num6" android:layout_width="match_parent" android:layout_height="match_parent" android:text="6"/>
+                <Button android:textSize="25sp" android:textColor="@color/myRedColor" android:id="@+id/sub" android:layout_width="match_parent" android:layout_height="match_parent" android:text="-"/>
+            </TableRow>
+            <TableRow android:orientation="horizontal">
+                <Button android:textSize="20sp" android:id="@+id/sqrt" android:layout_width="match_parent" android:layout_height="match_parent" android:text="sqrt"/>
+                <Button android:textSize="25sp" android:textColor="@color/myBlueColor" android:id="@+id/num1" android:layout_width="match_parent" android:layout_height="match_parent" android:text="1"/>
+                <Button android:textSize="25sp" android:textColor="@color/myBlueColor" android:id="@+id/num2" android:layout_width="match_parent" android:layout_height="match_parent" android:text="2"/>
+                <Button android:textSize="25sp" android:textColor="@color/myBlueColor" android:id="@+id/num3" android:layout_width="match_parent" android:layout_height="match_parent" android:text="3"/>
+                <Button android:textSize="25sp" android:textColor="@color/myRedColor" android:id="@+id/multiply" android:layout_width="match_parent" android:layout_height="match_parent" android:text="×"/>
+            </TableRow>
+            <TableRow android:orientation="horizontal">
+                <Button android:textSize="25sp" android:id="@+id/remainder" android:layout_width="match_parent" android:layout_height="match_parent" android:text="%"/>
+                <Button android:textSize="25sp" android:id="@+id/comma" android:layout_width="match_parent" android:layout_height="match_parent" android:text=","/>
+                <Button android:textSize="25sp" android:textColor="@color/myBlueColor" android:id="@+id/num0" android:layout_width="match_parent" android:layout_height="match_parent" android:text="0"/>
+                <Button android:textSize="25sp" android:id="@+id/dot" android:layout_width="match_parent" android:layout_height="match_parent" android:text="."/>
+                <Button android:textSize="25sp" android:textColor="@color/myRedColor" android:id="@+id/divide" android:layout_width="match_parent" android:layout_height="match_parent" android:text="÷"/>
+            </TableRow>
+            <TableRow android:orientation="horizontal">
+                <Button android:id="@+id/more" android:layout_width="match_parent" android:layout_height="match_parent" android:text="..."/>
+                <Button android:textSize="25sp" android:id="@+id/lparenthesis" android:layout_width="match_parent" android:layout_height="match_parent" android:text="("/>
+                <Button android:textSize="25sp" android:id="@+id/rparenthesis" android:layout_width="match_parent" android:layout_height="match_parent" android:text=")"/>
+                <Button android:textSize="25sp" android:textColor="@color/myBlueColor" android:id="@+id/equals" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_span="2" android:text="="/>
+            </TableRow>
+        </TableLayout>
+        <LinearLayout android:gravity="right" android:orientation="horizontal" android:id="@+id/indepLayout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+            <Button android:layout_gravity="right" android:id="@+id/indepClearButton" android:paddingLeft="40dp" android:paddingRight="40dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="C"/>
+            <Button android:layout_gravity="right" android:id="@+id/indepCalButton" android:paddingLeft="40dp" android:paddingRight="40dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="="/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

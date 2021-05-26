@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="方法设置:"/>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="转换方法："/>
+            <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_translateMethods" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_translateParams" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="参数设置:"/>
+        <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:layout_marginRight="2dp">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:orientation="vertical" android:id="@+id/ll_translate_param_move" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <include layout="@layout/translate_param_move"/>
+                    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/buttonCheckBtn02" android:tag="单点校正" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="单点校正" android:drawableLeft="@drawable/calparam4byonepoint"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/translate_param_3" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <include layout="@layout/translate_param_3"/>
+                    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/buttonCheckBtn01" android:tag="单点校正" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="单点校正" android:drawableLeft="@drawable/calparam4byonepoint"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <include android:id="@+id/translate_param_7" android:visibility="gone" layout="@layout/translate_param_7"/>
+                <include android:id="@+id/translate_param_4" android:visibility="gone" layout="@layout/translate_param_4"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

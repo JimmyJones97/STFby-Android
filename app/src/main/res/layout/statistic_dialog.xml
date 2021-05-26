@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="统计参数:"/>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/headbar_text_marginLeft" android:text="分类字段："/>
+            <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_stasField" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/headbar_text_marginLeft" android:text="统计字段："/>
+            <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_stasField2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="right|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:layout_marginBottom="10dp">
+            <TextView android:textColor="@color/myRedColor" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:text="提示:如需统计数量,请设置分类字段与统计字段相同." android:layout_weight="1"/>
+            <Button android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_StartStatistic" android:tag="开始统计" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_margin="1dp" android:text="开始统计" android:drawableLeft="@drawable/loadfile48"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="统计结果:"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_chartView" android:layout_width="match_parent" android:layout_height="match_parent">
+                <lecho.lib.hellocharts.view.PieChartView android:id="@+id/pie_chart" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_tableView" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+                <include android:id="@+id/statistic_list" layout="@layout/mytable_listview"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <Button android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_ChangeViewTab" android:tag="显示切换" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="显示表格"/>
+            <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="" android:layout_weight="1"/>
+            <Button android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_ExportStatisticTb" android:tag="导出统计表" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="导出统计表" android:drawableLeft="@drawable/exportto"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

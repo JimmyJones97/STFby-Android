@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.stczh.gzforestSystem"
+    android:versionCode="109"
+    android:versionName="1.09">
+
+    <!--    <uses-sdk-->
+    <!--        android:minSdkVersion="14"-->
+    <!--        android:targetSdkVersion="21" />-->
+    <!--    <supports-screens-->
+    <!--        android:anyDensity="true"-->
+    <!--        android:largeScreens="true"-->
+    <!--        android:normalScreens="true"-->
+    <!--        android:resizeable="true"-->
+    <!--        android:smallScreens="true" />-->
+    <!--    <uses-feature-->
+    <!--        android:glEsVersion="20000"-->
+    <!--        android:required="true" />-->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.autofocus" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <application
+        android:name="com.xzy.forestSystem.minusoneapp.HookApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar">
+
+        <service
+            android:name="com.xzy.forestSystem.baidu.speech.VoiceRecognitionService"
+            android:exported="false" />
+
+        <activity
+            android:name="com.xzy.forestSystem.baidu.voicerecognition.android.p007ui.BaiduASRDigitalDialog"
+            android:configChanges="keyboardHidden|orientation|screenLayout"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog">
+            <intent-filter>
+                <action android:name="com.baidu.action.RECOGNIZE_SPEECH" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.xzy.forestSystem.MainActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize|smallestScreenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.xzy.forestSystem.gogisapi.QRCode.QRCaptureActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="二维码扫描"
+            android:screenOrientation="nosensor"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.xzy.forestSystem.gogisapi.Others.MediaActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="keyboardHidden|navigation|orientation"
+            android:label="多媒体管理"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name="com.xzy.forestSystem.AudioRecognition_Dialog"
+            android:configChanges="keyboardHidden|orientation|screenLayout"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Light" />
+    </application>
+    <meta-data
+        android:name="com.baidu.speech.APP_ID"
+        android:value="24235034" />
+    <meta-data
+        android:name="com.baidu.speech.API_KEY"
+        android:value="OVtPKq6W9QolagIw1QDjscnG" />
+
+    <meta-data
+        android:name="com.baidu.speech.SECRET_KEY"
+        android:value="GFmnipXNT9eH8CwMcT1aYNVIOabfnfcL" />
+
+</manifest>

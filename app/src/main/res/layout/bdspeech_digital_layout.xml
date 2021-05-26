@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:tag="bg_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14dp" android:layout_marginRight="14dp">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:tag="main_reflect" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:tag="recognizing_reflect" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <FrameLayout android:orientation="vertical" android:id="@+id/tips_container" android:paddingLeft="20dp" android:paddingTop="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="26sp" android:textColor="#ff3e3e3e" android:gravity="center" android:tag="tips_text" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                        <TextView android:textSize="18sp" android:textColor="#ff424242" android:gravity="center" android:tag="tips_wait_net" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                        <EditText android:textSize="18sp" android:textColor="#ff3e3e3e" android:tag="partial_text" android:background="@null" android:paddingTop="14dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@null" android:cursorVisible="true" android:maxLines="3" android:inputType="none"/>
+                    </FrameLayout>
+                    <com.xzy.forestSystem.baidu.voicerecognition.android.p007ui.SDKAnimationView
+                        android:tag="voicewave_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"/>
+                    <TextView android:textSize="14sp" android:textColor="#ffc1c1c1" android:gravity="left" android:tag="logo_1" android:background="@null" android:paddingLeft="10dp" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    <TextView android:textSize="14sp" android:textColor="#ffc1c1c1" android:gravity="center_horizontal" android:tag="suggestion_tips" android:background="@null" android:paddingBottom="5dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <com.xzy.forestSystem.baidu.voicerecognition.android.p007ui.SDKProgressBar
+                    android:tag="progress" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <TextView android:textSize="18sp" android:gravity="center" android:tag="speak_complete" android:layout_width="match_parent" android:layout_height="49dp"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:tag="help_reflect" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_marginBottom="49dp">
+                <TextView android:textSize="18sp" android:textStyle="bold" android:tag="help_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="12dp"/>
+                <ListView android:tag="suggestions_list" android:fadingEdge="vertical" android:fadingEdgeLength="10dp" android:layout_width="match_parent" android:layout_height="0dp" android:listSelector="@android:color/transparent" android:divider="@null" android:layout_weight="1" android:overScrollMode="never" android:requiresFadingEdge="vertical"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:tag="error_reflect" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:gravity="center" android:background="@null" android:layout_width="wrap_content" android:layout_height="0dp" android:layout_weight="1"/>
+                <TextView android:textSize="19sp" android:textColor="#ff3c3c3c" android:gravity="center" android:layout_gravity="center" android:tag="error_tips" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14dp" android:layout_marginRight="14dp"/>
+                <TextView android:textSize="19sp" android:textColor="#ff3c3c3c" android:gravity="center" android:layout_gravity="center" android:tag="suggestion_tips_2" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14dp" android:layout_marginRight="14dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="0dp" android:layout_weight="1"/>
+                <TextView android:textSize="14sp" android:textColor="#ffc1c1c1" android:layout_gravity="left" android:tag="logo_2" android:background="@null" android:paddingLeft="10dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="49dp">
+                    <TextView android:textSize="18sp" android:gravity="center" android:tag="cancel_text_btn" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+                    <TextView android:textSize="18sp" android:gravity="center" android:tag="retry_text_btn" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <ImageButton android:tag="cancel_btn" android:background="@null" android:padding="14dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:contentDescription="@null"/>
+        <ImageButton android:tag="help_btn" android:background="@null" android:padding="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:contentDescription="@null"/>
+    </RelativeLayout>
+</RelativeLayout>

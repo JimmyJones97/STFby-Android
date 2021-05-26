@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="GPS状态信息选项:"/>
+        <LinearLayout android:background="@color/myWhiteColor" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="0.5">
+                <CheckBox android:id="@+id/checkBox1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="定位状态" style="@style/text_default_Black"/>
+                <CheckBox android:id="@+id/checkBox2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="水平精度" style="@style/text_default_Black"/>
+                <CheckBox android:id="@+id/checkBox3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PDOP" style="@style/text_default_Black"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="0.5">
+                <CheckBox android:id="@+id/checkBox4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="速度" style="@style/text_default_Black"/>
+                <CheckBox android:id="@+id/checkBox5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="VDOP" style="@style/text_default_Black"/>
+                <CheckBox android:id="@+id/checkBox6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="卫星总数/解算" style="@style/text_default_Black"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="其他选项:"/>
+        <LinearLayout android:background="@color/myWhiteColor" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <CheckBox android:id="@+id/checkBox7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="坐标单行显示" style="@style/text_default_Black"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

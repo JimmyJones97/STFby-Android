@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="基本信息:"/>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="图层名称："/>
+            <EditText android:enabled="false" android:id="@+id/et_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="图层类型："/>
+            <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="字段信息:"/>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/bottom" android:layout_alignParentTop="true">
+                <include android:id="@+id/in_bklayerFieldsListview" layout="@layout/mytable_listview"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/bottom" android:background="@color/myWhiteColor" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/buttonSelectAll_bkfield" android:tag="全部显示" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="全部显示"/>
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/buttonSelectDe_bkfield" android:tag="反选显示" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="反选显示"/>
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_weight="1"/>
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/btn_VectorLayerMoreTools" android:tag="更多工具" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:text="更多"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

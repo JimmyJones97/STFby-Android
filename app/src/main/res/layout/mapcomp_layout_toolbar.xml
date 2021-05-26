@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/head_GPS_Info_layout"
+    style="@style/layout_transparent_back"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayoutMap"
+        style="@style/layout_transparent_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/imageButtonGPS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/LinearLayoutTopTitle"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/mb_button_selector"
+            android:src="@drawable/mb_gpssetting" />
+
+        <ImageButton
+            android:id="@+id/imageButtonLayers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageButtonGPS"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/mb_button_selector"
+            android:src="@drawable/mb_edit" />
+
+        <ImageButton
+            android:id="@+id/imageButtonSwitchLayers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageButtonLayers"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/mb_button_selector"
+            android:src="@drawable/mb_layers" />
+
+        <ImageButton
+            android:id="@+id/imageButtonLayersContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageButtonSwitchLayers"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/mb_button_selector"
+            android:src="@drawable/mb_layerscontent48"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/imageButtonYangdiDiaocha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageButtonSwitchLayers"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/mb_button_selector"
+            android:src="@drawable/mb_diaocha" />
+
+        <ImageButton
+            android:id="@+id/imageButtonMainMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/mb_button_selector"
+            android:src="@drawable/mb_menu"
+             />
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutTopTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/ll_headinfo_bg"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView_gps"
+                style="@style/text_default_White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:singleLine="false"
+                android:text="E:000°00′00″ N:000°00′00″ H:000" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageViewGPSOFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/myimgbuttonselector"
+                    android:src="@drawable/gps232" />
+
+                <ImageView
+                    android:id="@+id/imageViewGPSSNR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/myimgbuttonselector"
+                    android:src="@drawable/gpssxh_close" />
+
+                <TextView
+                    android:id="@+id/textViewTitleTip"
+                    style="@style/text_default_White"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="0.00m" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/imageButtonCompass"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/LinearLayoutTopTitle"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="5dp"
+            android:background="@color/myTransparentColor"
+            android:clickable="false"
+            android:focusable="false"
+            android:src="@drawable/compass2" />
+
+        <ImageButton
+            android:id="@+id/imageButton_Common"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageButtonCompass"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/mb_button_selector"
+            android:src="@drawable/mb_otherform" />
+
+        <ImageView
+            android:id="@+id/x_scalebar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/buttonstyle_nonborder"
+            android:clickable="true"
+            android:tag="地图比例尺显示设置" />
+
+        <ImageButton
+            android:id="@+id/imageButtonGPSLoc"
+            style="@style/MB_Button_Style"
+            android:layout_above="@+id/imageButtonZoomByExtend"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/mb_button_selector"
+            android:src="@drawable/mb_gpsarrow"
+            android:tag="解锁GPS" />
+
+        <ImageButton
+            android:id="@+id/imageButtonZoomByExtend"
+            style="@style/MB_Button_Style"
+            android:layout_above="@+id/imageButtonMainMenu"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/mb_button_selector"
+            android:src="@drawable/mb_zoomextend48"
+            android:tag="框选缩放" />
+
+        <com.xzy.forestSystem.gogisapi.MyControls.CircleMenu.CircleMenuComposer
+            android:id="@+id/cmc_expandMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_replaceMainMenu"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:id="@+id/ll_toolbarGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/mainbottomtoolbar"
+            layout="@layout/x_toolbar_mainmenu" />
+    </LinearLayout>
+</LinearLayout>

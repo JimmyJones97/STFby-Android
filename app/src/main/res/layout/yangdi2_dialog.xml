@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="样地信息:"/>
+        <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/dialog_txt_color" android:layout_gravity="left" android:id="@+id/tv_YangdiInfo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="样地信息" android:layout_weight="1"/>
+            <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:gravity="center" android:id="@+id/btn_edit" android:tag="编辑坐标" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="" android:drawableLeft="@drawable/edit"/>\10&quot;\10
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="样地调查数据列表:"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp">
+            <TextView android:textSize="18sp" android:textColor="@color/myBlueColor" android:gravity="center" android:background="@drawable/bg_withborder01" android:paddingTop="5dp" android:paddingBottom="5dp" android:layout_width="60dp" android:layout_height="wrap_content" android:text="根径"/>
+            <TextView android:textSize="18sp" android:textColor="@color/myBlueColor" android:gravity="center" android:background="@drawable/bg_withborder01" android:paddingTop="5dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="杉" android:layout_weight="1"/>
+            <TextView android:textSize="18sp" android:textColor="@color/myBlueColor" android:gravity="center" android:background="@drawable/bg_withborder01" android:paddingTop="5dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="马" android:layout_weight="1"/>
+            <TextView android:textSize="18sp" android:textColor="@color/myBlueColor" android:gravity="center" android:background="@drawable/bg_withborder01" android:paddingTop="5dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="阔" android:layout_weight="1"/>
+        </LinearLayout>
+        <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1">
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_Yangdi_DataList" android:layout_width="match_parent" android:layout_height="match_parent" android:minHeight="100dp" android:layout_weight="1"/>
+        </ScrollView>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/btn_AddGenJing" android:tag="添加根径" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_margin="5dp" android:text="添加根径"/>
+            <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/btn_Cal" android:tag="计算材积" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:text="计算材积"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_weight="1"/>
+            <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:gravity="center" android:id="@+id/btn_mediaMang" android:tag="多媒体" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="[0]照片" android:drawableLeft="@drawable/mediamanag"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dialog_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/dialog_headbar_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_headtext_corner_bg"
+            android:text="定位信息:"
+            android:textColor="@color/dialog_txt_color" />
+
+        <TextView
+            android:id="@+id/textViewTime"
+            style="@style/text_default_Black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/myWhiteColor"
+            android:text="时间:" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/myWhiteColor">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView01"
+                    style="@style/text_default_Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="时间:" />
+
+                <TextView
+                    android:id="@+id/textView02"
+                    style="@style/text_default_Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="经度:" />
+
+                <TextView
+                    android:id="@+id/textView03"
+                    style="@style/text_default_Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="速度:" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView04"
+                    style="@style/text_default_Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="高程:" />
+
+                <TextView
+                    android:id="@+id/textView05"
+                    style="@style/text_default_Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="纬度:" />
+
+                <TextView
+                    android:id="@+id/textView06"
+                    style="@style/text_default_Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="状态:" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/btn_gpsinfo_ChangeDevice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/dialog_btn_selector"
+                android:drawableLeft="@drawable/device1248"
+                android:tag="选择GPS设备"
+                android:text="切换设备"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/dialog_button_txt_color" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/dialog_headbar_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_headtext_corner_bg"
+            android:text="卫星信息:"
+            android:textColor="@color/dialog_txt_color" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearlayout01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.xzy.forestSystem.gogisapi.GPS.GPSSatelliteView
+                    android:id="@+id/gPSSatelliteView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlayout02"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:gravity="right">
+
+                    <ScrollView
+                        android:id="@+id/sv_show"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:fadeScrollbars="false"
+                        android:scrollbarAlwaysDrawVerticalTrack="true"
+                        android:scrollbars="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewRecData"
+                            style="@style/text_default_Red"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fadeScrollbars="false"
+                            android:scrollbars="vertical"
+                            android:singleLine="false"
+                            android:text="" />
+                    </ScrollView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right">
+
+                    <Button
+                        android:id="@+id/buttonSaveMsg"
+                        style="@style/dialog_Button01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/dialog_btn_selector"
+                        android:text="保存数据"
+                        android:textColor="@color/dialog_button_txt_color" />
+
+                    <Button
+                        android:id="@+id/buttonRasterLayersMang"
+                        style="@style/dialog_Button01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/dialog_btn_selector"
+                        android:text="切换视图"
+                        android:textColor="@color/dialog_button_txt_color" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

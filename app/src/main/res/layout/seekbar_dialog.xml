@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <ImageView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/messageinfo"/>
+                <TextView android:textSize="20sp" android:textColor="@color/myBlackColor" android:gravity="center" android:id="@+id/tv_seekbarDialog_title" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="提示"/>
+            </LinearLayout>
+            <View android:layout_gravity="center" android:background="#ff66ccff" android:layout_width="match_parent" android:layout_height="2dp" android:layout_margin="5dp"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_seekbarDialog_msg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:textColor="@color/myBlackColor" android:id="@+id/textview_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="提示 "/>
+                <SeekBar android:id="@+id/seekBarValue" android:focusable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="30dp" android:layout_marginTop="15dp" android:layout_marginRight="30dp" android:layout_marginBottom="15dp" android:maxHeight="4dp" android:progress="20" android:progressDrawable="@drawable/seekbar_style" android:minHeight="4dp" android:thumb="@drawable/seekbar_thumb" android:thumbOffset="0dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="参数值： "/>
+                    <EditText android:id="@+id/editTextSeekbar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:ems="10" android:layout_weight="1" android:inputType="number">
+                        <requestFocus/>
+                    </EditText>
+                </LinearLayout>
+            </LinearLayout>
+            <View android:layout_gravity="center" android:background="#ff66ccff" android:layout_width="match_parent" android:layout_height="2dp" android:layout_margin="5dp"/>
+            <LinearLayout android:gravity="center" android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="5dp">
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:gravity="center" android:id="@+id/btn_seekbarDialog_Posi" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="确定" android:layout_weight="1"/>
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:gravity="center" android:id="@+id/btn_seekbarDialog_Nagv" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="取消" android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

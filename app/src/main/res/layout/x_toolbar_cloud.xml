@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="horizontal" android:id="@+id/toolbar_cloud" android:background="@drawable/toolbar_shape" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <HorizontalScrollView android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+            <ScrollView android:layout_width="wrap_content" android:layout_height="match_parent">
+                <LinearLayout android:orientation="horizontal" android:id="@+id/ll_toolbar_cloud" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <Button android:id="@+id/buttonCloud_Login" android:tag="账号" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="账号" android:drawableTop="@drawable/login0248" style="@style/toolbar_Button_Style"/>
+                    <View android:background="#ffffffff" android:layout_width="1dp" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp"/>
+                    <Button android:id="@+id/buttonCloud_Upload" android:tag="上传数据" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="上传" android:drawableTop="@drawable/cloudup48" style="@style/toolbar_Button_Style"/>
+                    <Button android:id="@+id/buttonCloud_Download" android:tag="下载数据" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="下载" android:drawableTop="@drawable/clouddown48" style="@style/toolbar_Button_Style"/>
+                    <View android:layout_gravity="center" android:background="#ffffffff" android:layout_width="1dp" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp"/>
+                    <Button android:id="@+id/buttonCloud_Exit" android:tag="关闭工具" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="1dp" android:text="关闭" android:drawableTop="@drawable/close0148" style="@style/toolbar_Button_Style"/>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

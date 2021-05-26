@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="基本信息:"/>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="120dp" android:layout_height="wrap_content" android:text="县："/>
+                    <EditText android:id="@+id/et_BasicInput01" android:tag="县" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="120dp" android:layout_height="wrap_content" android:text="乡："/>
+                    <EditText android:id="@+id/et_BasicInput02" android:tag="乡" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="120dp" android:layout_height="wrap_content" android:text="村："/>
+                    <EditText android:id="@+id/et_BasicInput03" android:tag="村" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="120dp" android:layout_height="wrap_content" android:text="小班号："/>
+                    <EditText android:id="@+id/et_BasicInput04" android:tag="现状小班号" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="120dp" android:layout_height="wrap_content" android:text="样地号："/>
+                    <com.xzy.forestSystem.gogisapi.MyControls.InputSpinner android:id="@+id/sp_YangdiIndex" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+                <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="坐标与面积信息:"/>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="100dp" android:layout_height="wrap_content" android:text="X："/>
+                    <EditText android:id="@+id/et_X" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="100dp" android:layout_height="wrap_content" android:text="Y："/>
+                    <EditText android:id="@+id/et_Y" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="160dp" android:layout_height="wrap_content" android:text="样地面积(公顷)："/>
+                    <EditText android:id="@+id/et_YDArea" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.0667" android:layout_weight="1" android:inputType="numberDecimal"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">&quot;\10
+                    <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="right" android:id="@+id/btn_FromGPS" android:tag="GPS采样" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="GPS" android:layout_weight="1"/>
+                    <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="right" android:id="@+id/btn_FromMapCenter" android:tag="地图中心" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="地图中心" android:layout_weight="1"/>
+                    <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="right" android:id="@+id/btn_FromMeasure" android:tag="测量点" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="测量点" android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+                <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="样地信息:"/>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="120dp" android:layout_height="wrap_content" android:text="优势树种："/>
+                    <EditText android:id="@+id/et_Input01" android:tag="优势树种" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="120dp" android:layout_height="wrap_content" android:text="树种组成："/>
+                    <EditText android:id="@+id/et_Input02" android:tag="树种组成" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="120dp" android:layout_height="wrap_content" android:text="起源："/>
+                    <EditText android:id="@+id/et_Input03" android:tag="起源" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="120dp" android:layout_height="wrap_content" android:text="乔木郁闭度："/>
+                    <EditText android:id="@+id/et_Input04" android:tag="乔木郁闭度" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="120dp" android:layout_height="wrap_content" android:text="灌木覆盖度："/>
+                    <EditText android:id="@+id/et_Input05" android:tag="灌木覆盖度" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="120dp" android:layout_height="wrap_content" android:text="平均年龄："/>
+                    <EditText android:id="@+id/et_Input06" android:tag="平均年龄" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="120dp" android:layout_height="wrap_content" android:text="龄组："/>
+                    <EditText android:id="@+id/et_Input07" android:tag="龄组" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="120dp" android:layout_height="wrap_content" android:text="调查人员："/>
+                    <EditText android:id="@+id/et_Input08" android:tag="调查人员" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="top|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="top|right|center_vertical|center_horizontal|center" android:layout_gravity="right" android:layout_width="120dp" android:layout_height="wrap_content" android:text="备注："/>
+                    <EditText android:id="@+id/et_Remark" android:tag="备注" android:layout_width="wrap_content" android:layout_height="80dp" android:ems="10" android:layout_weight="1" android:inputType="textMultiLine"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="right" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+                    <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="right" android:id="@+id/btn_AutoGetInfo" android:tag="自动获取信息" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="自动获取信息" android:drawableLeft="@drawable/refresh"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">&quot;\10
+        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_YangdiTable" android:tag="标准地调查表" android:background="@drawable/dialog_btn_selector" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="标准地调查表" android:layout_weight="1"/>
+        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_SanShengMu" android:tag="散生木调查" android:background="@drawable/dialog_btn_selector" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:text="散生木调查" android:layout_weight="1"/>
+        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_CalXiaoBanYinZi" android:tag="计算小班因子" android:background="@drawable/dialog_btn_selector" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="计算小班因子" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

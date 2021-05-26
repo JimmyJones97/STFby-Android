@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+        <include android:id="@+id/list_coordsList" layout="@layout/mytable_listview"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/ll_dataTemp_Bottom" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:gravity="center" android:id="@+id/btn_ExportCoords" android:tag="导出坐标点" android:background="@drawable/dialog_btn_selector" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="导出坐标点" android:drawableLeft="@drawable/exportto"/>
+    </LinearLayout>
+</LinearLayout>

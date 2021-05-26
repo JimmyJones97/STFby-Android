@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dialog_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="图层："
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/myBlackColor" />
+
+        <com.xzy.forestSystem.gogisapi.MyControls.InputSpinner
+            android:id="@+id/sp_myQueryLayersList2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_zoomToLayerInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/myBlackColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <Button
+            android:id="@+id/bt_ZoomToLayerMove"
+            style="@style/Button_Style_Left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_btn_selector"
+            android:drawableLeft="@drawable/move0148"
+            android:tag="平移至图层"
+            android:text="平移至指定图层"
+            android:textColor="@color/dialog_button_txt_color" />
+
+        <Button
+            android:id="@+id/bt_ZoomToLayerBT"
+            style="@style/Button_Style_Left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_btn_selector"
+            android:drawableLeft="@drawable/zoomtolayer0148"
+            android:tag="缩放至图层"
+            android:text="缩放至指定图层"
+            android:textColor="@color/dialog_button_txt_color" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="气压与海拔信息:"/>
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="2">
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:layout_weight="1">
+                <TextView android:textSize="40sp" android:textColor="@color/myRedColor" android:gravity="right|center_vertical|center_horizontal|center" android:layout_gravity="center" android:id="@+id/tv_pressureValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="100" android:layout_weight="1"/>
+                <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:textColor="@color/myDarkBlueColor" android:gravity="bottom|left|center_vertical|center_horizontal|center" android:layout_gravity="center" android:id="@+id/tv_pressureUnit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="hPa"/>
+            </LinearLayout>
+            <LinearLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp" android:layout_weight="1">
+                <TextView android:textSize="40sp" android:textColor="@color/myBlueColor" android:gravity="right|center_vertical|center_horizontal|center" android:layout_gravity="center" android:id="@+id/tv_elevationValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="100" android:layout_weight="1"/>
+                <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:textColor="@color/myDarkBlueColor" android:gravity="bottom|left|center_vertical|center_horizontal|center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="m"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="过程线:"/>
+        <lecho.lib.hellocharts.view.LineChartView android:id="@+id/chart" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="提醒图层:"/>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="图层："/>
+            <com.xzy.forestSystem.gogisapi.MyControls.InputSpinner android:id="@+id/sp_myQueryLayersList" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="提醒设置:"/>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="目标距离提醒(m):"/>
+                    <EditText android:id="@+id/et_Nav_AlarmDis" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="1000.0" android:ems="10" android:layout_weight="1" android:inputType="numberDecimal"/>
+                </LinearLayout>
+                <LinearLayout android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GPS提醒间隔(s):"/>
+                    <EditText android:id="@+id/et_Nav_AlarmGPSTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="10" android:ems="10" android:layout_weight="1" android:inputType="numberDecimal"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

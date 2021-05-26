@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:layout_gravity="center"
+        android:id="@+id/preview_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.xzy.forestSystem.gogisapi.QRCode.ViewfinderView
+        android:id="@+id/viewfinder_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:id="@+id/tv_qr_title"
+            android:paddingTop="30dp"
+            android:paddingBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="扫码设备二维码"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true" />
+
+        <Button
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/dialog_button_txt_color"
+            android:id="@+id/btn_cancel_scan"
+            android:background="@drawable/dialog_btn_selector"
+            android:layout_width="230dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="70dp"
+            android:text="取  消"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:text="请将二维码置于上面方框内" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <HorizontalScrollView android:scrollbarAlwaysDrawVerticalTrack="true" android:background="@color/myWhiteColor" android:scrollbars="horizontal" android:layout_width="match_parent" android:layout_height="40dp">
+        <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:layout_gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:id="@+id/LinearLayoutSelector" android:scrollbars="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/text_default_Black">
+            <TextView android:id="@+id/textView2" android:background="@drawable/buttonstyle_nonborder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TextView"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+            <ListView android:id="@+id/listView1" android:layout_width="match_parent" android:layout_height="match_parent" android:cacheColorHint="#00000000"/>
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/linearLayoutbottom" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/buttonSelectAll" android:tag="全选" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="全选"/>
+            <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/buttonSelectDe" android:tag="反选" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="反选"/>
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:gravity="right" android:layout_gravity="center" android:id="@+id/tv_selectFileCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="数量:0" android:layout_weight="1"/>
+            <Button android:layout_gravity="center" android:id="@+id/buttonSelectFromWeiXin" android:tag="WeiXin文件夹" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="" android:drawableLeft="@drawable/weixin32"/>
+            <Button android:layout_gravity="center" android:id="@+id/buttonSelectFromQQ" android:tag="QQ文件夹" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:drawableLeft="@drawable/qq32"/>
+            <Button android:layout_gravity="center" android:id="@+id/buttonSelectFromTIM" android:tag="TIM文件夹" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="" android:drawableLeft="@drawable/tim32"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

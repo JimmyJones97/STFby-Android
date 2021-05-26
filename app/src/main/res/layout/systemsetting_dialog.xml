@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="GPS设置："/>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <ImageView android:layout_gravity="top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/satellite48"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+                            <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_showGPSScope" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="显示精度范围"/>
+                            <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_showGPSDirection" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="显示方位"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_gpsAtnHeightSetting" android:tag="GPS天线高度设置" android:background="@drawable/linearlayoutclick_style" android:clickable="true" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="5dp">
+                            <TextView android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="GPS天线高度:" style="@style/systemSetting_Text"/>
+                            <TextView android:textColor="@color/myBlueColor" android:id="@+id/tv_gpsAtnHeight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:text="0.0m" style="@style/systemSetting_Text"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="GPS数据采样时间与距离设置："/>
+                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/gps348"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <LinearLayout android:id="@+id/ll_gpsGatherSetting" android:tag="GPS数据采集设置" android:background="@drawable/linearlayoutclick_style" android:clickable="true" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+                            <TextView android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="采样时间:" style="@style/systemSetting_Text"/>
+                            <TextView android:textColor="@color/myBlueColor" android:id="@+id/tv_gpsGatherItvTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:text="1秒" style="@style/systemSetting_Text"/>
+                            <TextView android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="间隔:" style="@style/systemSetting_Text"/>
+                            <TextView android:textColor="@color/myBlueColor" android:id="@+id/tv_gpsGatherItvDistanceSet" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="1米" style="@style/systemSetting_Text"/>
+                            <TextView android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="精度:" style="@style/systemSetting_Text"/>
+                            <TextView android:textColor="@color/myBlueColor" android:id="@+id/tv_gpsGatherAccuracySet" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="5米" android:layout_weight="1" style="@style/systemSetting_Text"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_GPS_Gather_PointAuto" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="GPS采集点时自动采集" android:layout_weight="1"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="坐标栏显示格式设置："/>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/topxy"/>
+                    <LinearLayout android:id="@+id/ll_gpsShowCoordSetting" android:tag="GPS坐标栏显示设置" android:background="@drawable/linearlayoutclick_style" android:clickable="true" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textColor="@color/myBlackColor" android:id="@+id/tv_gpsCoordTypeSample2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="" android:layout_weight="1" style="@style/systemSetting_Text"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="足迹记录设置："/>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <ImageView android:layout_gravity="top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/track48"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="vertical" android:id="@+id/ll_trackSetting" android:tag="足迹记录设置" android:background="@drawable/linearlayoutclick_style" android:clickable="true" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="记录模式:" style="@style/systemSetting_Text"/>
+                                <TextView android:textColor="@color/myBlueColor" android:id="@+id/tv_TrackRecordType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:text="按时间间隔记录" style="@style/systemSetting_Text"/>
+                            </LinearLayout>
+                            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+                                <TextView android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="间隔:" style="@style/systemSetting_Text"/>
+                                <TextView android:textColor="@color/myBlueColor" android:id="@+id/tv_TrackRecordParam" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="1秒" android:layout_weight="1" style="@style/systemSetting_Text"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_trackAutoRecord" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="GPS定位后自动记录" android:layout_weight="1"/>
+                            <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_trackDrawDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="绘制足迹时间" android:layout_weight="1"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="工具栏："/>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <ImageView android:layout_gravity="top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/toolbar48"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+                        <LinearLayout android:gravity="center" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+                            <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_ToolbarGesClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="允许手势关闭"/>
+                            <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_Toolbar_AutoResize" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="自动调整尺寸" android:layout_weight="1"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+                            <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_ToolbarShowMainMenu" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="显示底部主菜单" android:layout_weight="1"/>
+                            <Button android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/btn_SysToolbarDefault" android:tag="重置工具栏位置" android:background="@drawable/dialog_btn_selector" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="重置工具栏位置" android:layout_weight="1" style="@style/systemSetting_Text"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="扩展模块设置："/>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <ImageView android:layout_gravity="top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ducha48"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:gravity="left" android:layout_gravity="left|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_ToolbarYangDiDiaoCha" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:checked="true" android:text="样地调查"/>
+                            <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_ToolbarSenLinDuCha" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:checked="true" android:text="森林督察"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="编辑设置："/>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <ImageView android:layout_gravity="top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/line0348"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:gravity="center" android:layout_gravity="left|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_ToolbarAllowSnap" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:checked="true" android:text="允许自动捕捉"/>
+                            <LinearLayout android:id="@+id/ll_ToolbarAllowSnap" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:layout_weight="1">
+                                <TextView android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="自动捕捉范围:" style="@style/systemSetting_Text"/>
+                                <EditText android:id="@+id/et_snapDistance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="20.0" android:ems="10" android:layout_weight="1" android:inputType="numberDecimal"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                            <TextView android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="面割时容差:" style="@style/systemSetting_Text"/>
+                            <EditText android:id="@+id/et_SysSetting_ClipEps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.0001" android:ems="10" android:layout_weight="1" android:inputType="numberDecimal"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="消息输出窗体设置："/>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/outmsgform48"/>
+                    <LinearLayout android:id="@+id/ll_OutMsgSetting" android:tag="消息输出窗体设置" android:background="@drawable/linearlayoutclick_style" android:clickable="true" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="窗体宽度:" style="@style/systemSetting_Text"/>
+                        <TextView android:textColor="@color/myBlueColor" android:id="@+id/tv_OutMsgWidth" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:text="400" style="@style/systemSetting_Text"/>
+                        <TextView android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="窗体高度:" style="@style/systemSetting_Text"/>
+                        <TextView android:textColor="@color/myBlueColor" android:id="@+id/tv_OutMsgHeight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="300" style="@style/systemSetting_Text"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="分屏窗体设置："/>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/windowform"/>
+                    <LinearLayout android:id="@+id/ll_childMapSetting" android:tag="分屏窗体设置" android:background="@drawable/linearlayoutclick_style" android:clickable="true" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="窗体宽度:" style="@style/systemSetting_Text"/>
+                        <TextView android:textColor="@color/myBlueColor" android:id="@+id/tv_childMapWidth" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:text="400" style="@style/systemSetting_Text"/>
+                        <TextView android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="窗体高度:" style="@style/systemSetting_Text"/>
+                        <TextView android:textColor="@color/myBlueColor" android:id="@+id/tv_childMapHeight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="300" style="@style/systemSetting_Text"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="图层列表窗体设置："/>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/formsize0148"/>
+                    <LinearLayout android:id="@+id/ll_LayersContentFormSetting" android:tag="图层列表窗体设置" android:background="@drawable/linearlayoutclick_style" android:clickable="true" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="窗体宽度:" style="@style/systemSetting_Text"/>
+                        <TextView android:textColor="@color/myBlueColor" android:id="@+id/tv_LayersContentFormWidth" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:text="400" style="@style/systemSetting_Text"/>
+                        <TextView android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="窗体高度:" style="@style/systemSetting_Text"/>
+                        <TextView android:textColor="@color/myBlueColor" android:id="@+id/tv_LayersContentFormHeight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="300" style="@style/systemSetting_Text"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="数据设置："/>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/database1048"/>
+                    <LinearLayout android:background="@drawable/linearlayoutclick_style" android:clickable="true" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_ToolbarDatasetSafety" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="安全模式" android:layout_weight="1"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="其他："/>
+                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="背景颜色:" style="@style/systemSetting_Text"/>
+                    <com.xzy.forestSystem.gogisapi.MyControls.InputSpinner android:id="@+id/sp_systembgcolor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="面积单位:" style="@style/systemSetting_Text"/>
+                    <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_areaUnitType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_showHeadTipInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="显示顶部坐标栏"/>
+                    <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_showCompass" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="显示指北针"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_showScalebar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="显示比例尺        "/>
+                    <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_MessageDialoAllowShow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="允许显示消息"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_ScreenFull" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="全屏显示"/>
+                    <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_ScreenLand" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="横屏显示"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_editShowProp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="编辑图形后显示属性窗体"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_RasterInHigh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="栅格高清显示模式"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_showCompassInMap" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="地图中显示电子罗盘"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_DrawPolygonShow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="绘制面时实时显示图形"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_MediaInfo_Input_Bool" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="多媒体文件名需要输入"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_RasterCache" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="地图显示缓存"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <LinearLayout android:orientation="horizontal" android:id="@+id/ll_selectClickBias" android:tag="选择时容差设置" android:background="@drawable/linearlayoutclick_style" android:clickable="true" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp">
+                        <TextView android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="地图选择时容差设置:" style="@style/systemSetting_Text"/>
+                        <TextView android:textColor="@color/myBlueColor" android:id="@+id/tv_selectClickBias" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:text="10" style="@style/systemSetting_Text"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

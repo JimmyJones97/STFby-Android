@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:layout_weight="1">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="督查图层列表:"/>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="5dp" android:minHeight="100dp" android:layout_weight="1">
+            <include android:id="@+id/mytable_senlinducha_layerlist" layout="@layout/mytable_listview"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_exportWithPhoto" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="导出图片"/>
+    </LinearLayout>
+</LinearLayout>

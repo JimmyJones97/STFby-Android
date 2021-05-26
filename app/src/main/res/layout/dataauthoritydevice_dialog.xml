@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="10dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+        <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="设备ID:"/>
+        <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/et_dataAuth_Device" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="请输入授权的设备ID." android:ems="10" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="right|center_vertical|center_horizontal|center" android:id="@+id/ll_dataAuth_DeviceBtn" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="10dp">
+        <ImageButton android:id="@+id/imgBtn_dataAuth_ThisDevice" android:background="@drawable/flatbutton_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cloudme"/>
+        <ImageButton android:id="@+id/imgBtn_dataAuth_Copy" android:background="@drawable/flatbutton_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:src="@drawable/cloudcopy"/>
+        <ImageButton android:id="@+id/imgBtn_dataAuth_QRScan" android:background="@drawable/flatbutton_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/qrscane"/>
+        <ImageButton android:id="@+id/imgBtn_dataAuth_RefreshCloud" android:background="@drawable/flatbutton_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:src="@drawable/cloudreload"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <CheckBox android:textColor="@color/dialog_txt_color" android:id="@+id/checkBox1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="可读"/>
+        <CheckBox android:textColor="@color/dialog_txt_color" android:id="@+id/checkBox2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="可写"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_dataauthdevice_OK" android:tag="确定" android:background="@drawable/dialog_btn_selector" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp" android:text="确       定      " android:drawableLeft="@drawable/ok_white"/>
+    </LinearLayout>
+</LinearLayout>

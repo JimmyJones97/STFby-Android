@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dialog_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/dialog_headbar_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_headtext_corner_bg"
+            android:text="符号示例:"
+            android:textColor="@color/dialog_txt_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageViewSymbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:minHeight="40dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/point11032" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/dialog_headbar_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_headtext_corner_bg"
+            android:text="符号定义:"
+            android:textColor="@color/dialog_txt_color" />
+
+        <LinearLayout
+            android:id="@+id/pointSymbolLyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/headbar_text_marginLeft"
+                    android:text="样式："
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/dialog_txt_color" />
+
+                <com.xzy.forestSystem.gogisapi.MyControls.ImageSpinnerDialog
+                    android:id="@+id/sp_pointType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinnerlist_bg" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/headbar_text_marginLeft"
+                    android:text="颜色："
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/dialog_txt_color" />
+
+                <com.xzy.forestSystem.gogisapi.MyControls.InputSpinner
+                    android:id="@+id/sp_pointcolor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/headbar_text_marginLeft"
+                    android:text="大小："
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/dialog_txt_color" />
+
+                <EditText
+                    android:id="@+id/sp_pointSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/polygonSymbolLyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/headbar_text_marginLeft"
+                    android:text="面填充方式："
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/dialog_txt_color" />
+
+                <RadioGroup
+                    android:id="@+id/rg_polygonFillType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rg_polygonFillType_R01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:checked="true"
+                        android:text="颜色"
+                        android:textColor="@color/dialog_txt_color" />
+
+                    <RadioButton
+                        android:id="@+id/rg_polygonFillType_R02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="图案"
+                        android:textColor="@color/dialog_txt_color" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_polyFillColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/headbar_text_marginLeft"
+                    android:text="面颜色："
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/dialog_txt_color" />
+
+                <com.xzy.forestSystem.gogisapi.MyControls.InputSpinner
+                    android:id="@+id/sp_polyColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_polyFillImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/headbar_text_marginLeft"
+                        android:text="填充图案："
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/dialog_txt_color" />
+
+                    <ImageView
+                        android:id="@+id/imgView_polygonFill"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:minHeight="40dp"
+                        android:src="@drawable/grid_fill" />
+
+                    <Button
+                        android:id="@+id/btn_symboledit_LoadImgFile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/dialog_btn_selector"
+                        android:drawableLeft="@drawable/loadfile48"
+                        android:tag="导入图案填充文件"
+                        android:text="导入文件"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/dialog_button_txt_color" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/headbar_text_marginLeft"
+                        android:text="图案比例："
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/dialog_txt_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="X："
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/dialog_txt_color" />
+
+                        <EditText
+                            android:id="@+id/et_polyFillScaleX"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:inputType="numberDecimal"
+                            android:text="1.0" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="Y："
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/dialog_txt_color" />
+
+                        <EditText
+                            android:id="@+id/et_polyFillScaleY"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:inputType="numberDecimal"
+                            android:text="1.0" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/headbar_text_marginLeft"
+                        android:text="相邻间距："
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/dialog_txt_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="X："
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/dialog_txt_color" />
+
+                        <EditText
+                            android:id="@+id/et_polyFillDisX"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:inputType="numberSigned"
+                            android:text="0" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="Y："
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/dialog_txt_color" />
+
+                        <EditText
+                            android:id="@+id/et_polyFillDisY"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:inputType="numberSigned"
+                            android:text="0" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/headbar_text_marginLeft"
+                    android:text="边颜色："
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/dialog_txt_color" />
+
+                <com.xzy.forestSystem.gogisapi.MyControls.InputSpinner
+                    android:id="@+id/sp_polyBorderColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/headbar_text_marginLeft"
+                    android:text="大    小："
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/dialog_txt_color" />
+
+                <EditText
+                    android:id="@+id/sp_polyLineWidthSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lineSymbolLyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/headbar_text_marginLeft"
+                    android:text="样式："
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/dialog_txt_color" />
+
+                <com.xzy.forestSystem.gogisapi.MyControls.ImageSpinnerDialog
+                    android:id="@+id/sp_lineType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinnerlist_bg" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/headbar_text_marginLeft"
+                    android:text="颜色："
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/dialog_txt_color" />
+
+                <com.xzy.forestSystem.gogisapi.MyControls.InputSpinner
+                    android:id="@+id/sp_linecolor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/headbar_text_marginLeft"
+                    android:text="大小："
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/dialog_txt_color" />
+
+                <EditText
+                    android:id="@+id/sp_lineWidth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutbottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_New"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/dialog_btn_selector"
+                    android:drawableLeft="@drawable/newfile0148"
+                    android:tag="新建线符号"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/dialog_button_txt_color" />
+
+                <Button
+                    android:id="@+id/btn_Up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/dialog_btn_selector"
+                    android:drawableLeft="@drawable/up1348"
+                    android:tag="上移线符号"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/dialog_button_txt_color" />
+
+                <Button
+                    android:id="@+id/btn_Down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/dialog_btn_selector"
+                    android:drawableLeft="@drawable/down1348"
+                    android:tag="下移线符号"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/dialog_button_txt_color" />
+
+                <Button
+                    android:id="@+id/btn_Delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/dialog_btn_selector"
+                    android:drawableLeft="@drawable/deleteobject"
+                    android:tag="删除线符号"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/dialog_button_txt_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/linesymbols_list"
+                    layout="@layout/mytable_listview" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/btn_symboledit_saveas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/dialog_btn_selector"
+                android:drawableLeft="@drawable/save48"
+                android:tag="另存"
+                android:text="符号另存"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/dialog_button_txt_color" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="基本信息:"/>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="120dp" android:layout_height="wrap_content" android:text="县："/>
+                    <EditText android:id="@+id/et_BasicInput01" android:tag="县" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="120dp" android:layout_height="wrap_content" android:text="乡："/>
+                    <EditText android:id="@+id/et_BasicInput02" android:tag="乡" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="120dp" android:layout_height="wrap_content" android:text="村："/>
+                    <EditText android:id="@+id/et_BasicInput03" android:tag="村" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="120dp" android:layout_height="wrap_content" android:text="小班号："/>
+                    <EditText android:id="@+id/et_BasicInput04" android:tag="现状小班号" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+                <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="散生木信息:"/>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="120dp" android:layout_height="wrap_content" android:text="树种："/>
+                    <EditText android:id="@+id/et_Input01" android:tag="优势树种" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                    <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_SelectShuZhong" android:tag="选择树种" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="选择树种"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="120dp" android:layout_height="wrap_content" android:text="平均胸径："/>
+                    <EditText android:id="@+id/et_Input02" android:tag="平均胸径" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:inputType="numberDecimal"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="120dp" android:layout_height="wrap_content" android:text="平均高："/>
+                    <EditText android:id="@+id/et_Input03" android:tag="平均高" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:inputType="numberDecimal"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="120dp" android:layout_height="wrap_content" android:text="株树："/>
+                    <EditText android:id="@+id/et_Input04" android:tag="株树" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:inputType="numberSigned"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="120dp" android:layout_height="wrap_content" android:text="散生木蓄积："/>
+                    <EditText android:id="@+id/et_Input05" android:tag="散生木蓄积" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:inputType="numberDecimal"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="right" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+                    <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="right" android:id="@+id/btn_CalXUJI" android:tag="计算蓄积" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="计算蓄积" android:drawableLeft="@drawable/refresh"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

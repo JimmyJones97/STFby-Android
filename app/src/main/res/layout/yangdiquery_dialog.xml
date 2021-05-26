@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="查询设置:"/>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="80dp" android:layout_height="wrap_content" android:text="省区："/>
+                <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_Yangdi01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_queryCondition" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="80dp" android:layout_height="wrap_content" android:text="县局："/>
+                    <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_Yangdi02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="80dp" android:layout_height="wrap_content" android:text="乡镇场："/>
+                    <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_Yangdi03" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="80dp" android:layout_height="wrap_content" android:text="村："/>
+                    <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_Yangdi04" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="80dp" android:layout_height="wrap_content" android:text="图斑："/>
+                    <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_Yangdi05" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="80dp" android:layout_height="wrap_content" android:text="样地号："/>
+                    <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_Yangdi06" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">&quot;\10
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="left" android:id="@+id/btn_YangDiExpand" android:tag="展开查询条件" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="" android:drawableLeft="@drawable/expand0148"/>
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="right" android:id="@+id/btn_YangDiQuery" android:tag="查询" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="查询" android:drawableLeft="@drawable/query" android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1">
+            <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="查询结果列表:"/>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="5dp" android:minHeight="100dp" android:layout_weight="1">
+                <include android:id="@+id/mytable_yangdi_layerlist" layout="@layout/mytable_listview"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_YangDiInMap" android:tag="样地地图展示" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_margin="5dp" android:text="地图展示" android:drawableLeft="@drawable/map2548"/>
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_DeleteYangDi" android:tag="删除样地" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:text="删除样地" android:drawableLeft="@drawable/deleteobject"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_weight="1"/>
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:id="@+id/buttonSelectAll" android:tag="全选" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:text="全选"/>
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:id="@+id/buttonSelectDe" android:tag="反选" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="反选"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_YangdiShare" android:tag="共享样地数据" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="共享数据" android:drawableLeft="@drawable/share48" android:layout_weight="1"/>
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_LoadYangdiQR" android:tag="导入样地数据" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="导入数据" android:drawableLeft="@drawable/qrcode" android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

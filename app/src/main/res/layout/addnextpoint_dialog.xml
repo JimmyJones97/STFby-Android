@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="坐标数据:"/>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <RadioGroup android:orientation="horizontal" android:id="@+id/rg_addNextPoint" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <RadioButton android:textColor="@color/dialog_txt_color" android:id="@+id/addNextPoint_radio0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:checked="true" android:text="坐标值"/>
+                <RadioButton android:textColor="@color/dialog_txt_color" android:id="@+id/addNextPoint_radio1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="方位值"/>
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/ll_addNextPoint01" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="X方向偏移值ΔX(m)："/>
+                <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/et_xbias" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.0" android:ems="10" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Y方向偏移值ΔY(m)："/>
+                <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/et_ybias" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.0" android:ems="10" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/ll_addNextPoint02" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="角度( ° )："/>
+                <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/et_addPointAngle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:ems="10" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="距离(m)："/>
+                <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/et_addPointDistance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:ems="10" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

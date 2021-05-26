@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center_vertical" android:background="@layout/x_bk_head_splitbar" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/imageView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:src="@drawable/information0848"/>
+        <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:id="@+id/headerMsg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="提示"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:layout_marginTop="10dp" android:layout_marginBottom="10dp">
+        <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:id="@+id/textViewMsg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="提示"/>
+    </LinearLayout>
+</LinearLayout>

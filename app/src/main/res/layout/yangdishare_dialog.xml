@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="共享信息:"/>
+        <TextView android:textColor="@color/dialog_txt_color" android:id="@+id/tv_YangdiInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="共享信息"/>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="100dp">
+            <ImageView android:id="@+id/img_ShareQRCode" android:layout_width="match_parent" android:layout_height="200dp" android:layout_margin="10dp" android:src="@drawable/ic_launcher"/>
+            <TextView android:textColor="@color/myRedColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="提示:如未取消数据共享,共享数据将在5分钟后自动过期."/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="8dp" android:layout_weight="1">
+            <ImageButton android:id="@+id/img_streetMap" android:tag="显示矢量背景图层" android:background="@color/dialog_bg_color" android:padding="5dp" android:layout_width="300px" android:layout_height="220px" android:layout_margin="3dp" android:src="@drawable/switch_street_map" android:scaleType="fitCenter" android:baselineAlignBottom="false"/>
+            <TextView android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="1dp" android:text="矢量背景图层"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="8dp" android:layout_weight="1">
+            <ImageButton android:id="@+id/img_sateMap" android:tag="显示栅格图层" android:background="@color/dialog_bg_color" android:padding="5dp" android:layout_width="300px" android:layout_height="220px" android:layout_margin="3dp" android:src="@drawable/switch_satellite_map" android:scaleType="fitCenter" android:baselineAlignBottom="false"/>
+            <TextView android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="1dp" android:text="栅格图层"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

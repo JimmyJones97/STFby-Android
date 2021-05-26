@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="GPS坐标信息:"/>
+                <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="经度(°)  ："/>
+                            <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/et_GPSPara_GPS_X" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:ems="10" android:layout_weight="1" android:inputType="numberDecimal">
+                                <requestFocus/>
+                            </EditText>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp">
+                            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="纬度(°)  ："/>
+                            <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/et_GPSPara_GPS_Y" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:ems="10" android:layout_weight="1" android:inputType="numberDecimal"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="高程(m)："/>
+                            <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/et_GPSPara_GPS_Z" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:ems="10" android:layout_weight="1" android:inputType="numberDecimal"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+                            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GPS采样点："/>
+                            <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/editTextPara03" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5" android:ems="10" android:numeric="integer" android:layout_weight="1" android:inputType="numberSigned"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:layout_gravity="right" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="4">
+                        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:gravity="center" android:id="@+id/btn_GPSParaGetGPS" android:tag="GPS" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="GPS" android:drawableTop="@drawable/addcheckpoint"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="目标点信息:"/>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="目标点坐标系："/>
+                    <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_toTranslateMethod" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="中央经线(°)："/>
+                    <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_GPSParaCenterLine" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp" android:layout_weight="1">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="X："/>
+                            <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/et_gpsParaCal_X" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:hint="输入横轴坐标值,带东偏值" android:ems="10" android:layout_weight="1" android:inputType="numberDecimal"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Y："/>
+                            <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/et_gpsParaCal_Y" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:hint="输入纵轴坐标值" android:ems="10" android:layout_weight="1" android:inputType="numberDecimal"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Z："/>
+                            <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/et_gpsParaCal_Z" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:hint="输入高程值" android:ems="10" android:layout_weight="1" android:inputType="numberDecimal"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:gravity="center" android:id="@+id/btn_gpsparm_getFromMeasure" android:tag="调取" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="调取" android:drawableTop="@drawable/addcheckpoint"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="参数计算:"/>
+                <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="计算参数："/>
+                            <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_GPSParaType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="right|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:layout_marginBottom="10dp">
+                            <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:gravity="center" android:id="@+id/btn_GPSParaCal" android:tag="计算参数" android:background="@drawable/dialog_btn_selector" android:layout_width="120dp" android:layout_height="wrap_content" android:text="计    算" android:drawableLeft="@drawable/calculator1548"/>
+                        </LinearLayout>
+                        <EditText android:id="@+id/et_CalResult" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:ems="10" android:inputType="textMultiLine"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

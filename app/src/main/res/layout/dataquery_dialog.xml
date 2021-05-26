@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="查询选项:"/>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="图层："/>
+            <com.xzy.forestSystem.gogisapi.MyControls.InputSpinner android:id="@+id/sp_myQueryLayersList" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+            <Button android:id="@+id/btn_queryData" android:tag="查询全部" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:drawableLeft="@drawable/data_query" style="@style/Button_Style_Left"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+            <Button android:textColor="@color/dialog_button_txt_color" android:id="@+id/buttonSetting" android:tag="设置" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="设置" android:drawableLeft="@drawable/toolsbox" android:layout_weight="1" style="@style/Button_Style_Left"/>
+            <Button android:textColor="@color/dialog_button_txt_color" android:id="@+id/buttonDelete" android:tag="删除" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:text="删除" android:drawableLeft="@drawable/deleteobject" android:layout_weight="1" style="@style/Button_Style_Left"/>
+            <Button android:textColor="@color/dialog_button_txt_color" android:id="@+id/buttonLoc" android:tag="定位" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:text="定位" android:drawableLeft="@drawable/locatetomap" android:layout_weight="1" style="@style/Button_Style_Left"/>
+            <Button android:textColor="@color/dialog_button_txt_color" android:id="@+id/buttonFilter" android:tag="过滤" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:text="筛选" android:drawableLeft="@drawable/data_filter" android:layout_weight="1" style="@style/Button_Style_Left"/>
+            <Button android:textColor="@color/dialog_button_txt_color" android:id="@+id/button_Tools" android:tag="功能" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="功能" android:drawableLeft="@drawable/function0248" android:layout_weight="1" style="@style/Button_Style_Left"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="查询结果:"/>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/linearLayoutbottom">
+                <include android:id="@+id/prj_list" layout="@layout/mytable_listview"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="bottom" android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/linearLayoutbottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/buttonSelectAll" android:tag="全选" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="全选"/>
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/buttonSelectDe" android:tag="反选" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="反选"/>
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_gravity="center" android:id="@+id/textviewInfo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="数量:0"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

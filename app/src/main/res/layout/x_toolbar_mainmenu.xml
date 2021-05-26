@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/text_menu_back"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_alignParentBottom="true"
+    android:layout_gravity="bottom"
+    android:gravity="center"
+    android:paddingBottom="0dp"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        style="@style/text_menu_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="0dp">
+
+        <Button
+            android:id="@+id/buttonLayer"
+            style="@style/menu_Button_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/toolbar_btn_selector"
+            android:drawableTop="@drawable/layerlist"
+            android:gravity="center"
+            android:tag="图层"
+            android:text="图层" />
+
+        <RelativeLayout
+            android:id="@+id/rly_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/toolbar_btn_selector"
+            android:clickable="true"
+            android:focusable="true"
+
+            android:gravity="center"
+            android:tag="选择">
+
+            <Button
+                android:id="@+id/buttonSelect"
+                style="@style/menu_Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/toolbar_btn_selector"
+                android:drawableTop="@drawable/selection_menu"
+                android:gravity="center"
+                android:tag="选择"
+                android:text="选择" />
+
+            <TextView
+                android:id="@+id/textViewSelectCount"
+                style="@style/text_default_BlueBg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/textview_selection_style"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="0"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_MainMenu_Query"
+            style="@style/menu_Button_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/toolbar_btn_selector"
+            android:drawableTop="@drawable/querydata_menu"
+            android:gravity="center"
+            android:tag="查询"
+            android:text="查询" />
+
+        <Button
+            android:id="@+id/btn_MainMenu_Track"
+            style="@style/menu_Button_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/toolbar_btn_selector"
+            android:drawableTop="@drawable/track48"
+            android:gravity="center"
+            android:tag="足迹"
+            android:text="足迹" />
+
+        <Button
+            android:id="@+id/btn_MainMenu_Navigation"
+            style="@style/menu_Button_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/toolbar_btn_selector"
+            android:drawableTop="@drawable/navigator48"
+            android:gravity="center"
+            android:tag="导航"
+            android:text="导航" />
+
+        <Button
+            android:id="@+id/btn_MainMenu_Tools"
+            style="@style/menu_Button_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/toolbar_btn_selector"
+            android:drawableTop="@drawable/toolsbox"
+            android:gravity="center"
+            android:tag="工具"
+            android:text="工具" />
+
+        <Button
+            android:id="@+id/buttonTools"
+            style="@style/menu_Button_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/toolbar_btn_selector"
+            android:drawableTop="@drawable/expandmore0248"
+            android:gravity="center"
+            android:tag="更多设置"
+            android:text="更多" />
+    </LinearLayout>
+</RelativeLayout>

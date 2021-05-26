@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:layout_weight="1">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="空间数据图层:"/>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/linearLayoutbottom">
+                <include android:id="@+id/list_layersList" layout="@layout/mytable_listview"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="bottom" android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/linearLayoutbottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/buttonSelectAll" android:tag="全选" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="全选"/>
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/buttonSelectDe" android:tag="反选" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="反选"/>
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/btn_RefreshLayers" android:tag="刷新空间数据库图层" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="刷新"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="right|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:layout_marginBottom="10dp">
+        <Button android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_LoginIn" android:tag="登入服务器" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_margin="1dp" android:text="登  陆" android:drawableLeft="@drawable/login0248"/>
+        <Button android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_OK" android:tag="下载数据" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_margin="1dp" android:text="下载数据" android:drawableLeft="@drawable/clouddownload48"/>
+    </LinearLayout>
+</LinearLayout>

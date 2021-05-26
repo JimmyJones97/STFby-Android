@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="注册信息:"/>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:id="@+id/tv_xlabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="姓        名："/>
+            <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/et_reg_Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:hint="请输入您的姓名" android:ems="10" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="单        位："/>
+            <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/et_reg_Part" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:hint="请输入您的单位名称" android:ems="10" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="电子邮箱："/>
+            <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/et_reg_EMail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:hint="请输入您的电子邮箱" android:ems="10" android:layout_weight="1" android:inputType="textEmailAddress"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="手机号码："/>
+            <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/et_reg_PhoneNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:hint="请输入您的手机号码" android:ems="10" android:layout_weight="1" android:inputType="phone"/>
+            <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/btn_reg_getSMS" android:tag="验证码" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="验证码"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@+id/ll_smscode" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="验  证  码："/>
+            <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/et_reg_SMSCode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:hint="请输入您接收到的验证码" android:ems="10" android:layout_weight="1" android:inputType="phone"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="5dp">
+        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:tag="注册" android:background="@drawable/dialog_btn_selector" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="注册" android:drawableLeft="@drawable/check2048" android:layout_weight="1"/>
+        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/bt_RegOnline" android:tag="开始注册" android:background="@drawable/dialog_btn_selector" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="开始注册" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

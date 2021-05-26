@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center_vertical" android:background="@layout/x_bk_head_splitbar" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:src="@drawable/messageinfo"/>
+        <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:id="@+id/tv_headerMsg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="提示"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:minHeight="100dp">
+        <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:ellipsize="end" android:gravity="top|left|center_vertical|center_horizontal|center" android:id="@+id/tv_textViewMsg" android:scrollbars="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="提示内容" android:singleLine="false"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:layout_alignParentBottom="true">
+        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/btn_infoDialog_OK" android:tag="确定" android:background="@drawable/dialog_btn_selector" android:layout_width="100dp" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="确  定"/>
+    </LinearLayout>
+</LinearLayout>

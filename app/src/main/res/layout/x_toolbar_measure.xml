@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="horizontal" android:id="@+id/toolbar_measure" android:background="@drawable/toolbar_shape" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <HorizontalScrollView android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+            <ScrollView android:layout_width="wrap_content" android:layout_height="match_parent">
+                <LinearLayout android:orientation="horizontal" android:id="@+id/ll_toolbar_measure" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <Button android:id="@+id/buttonMeasureLenArea" android:tag="测量长度与面积" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="测量" android:drawableTop="@drawable/measure48" style="@style/toolbar_Button_Style"/>
+                    <Button android:id="@+id/buttonMeasureArea" android:tag="测量面积" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="面积" android:drawableTop="@drawable/area" style="@style/toolbar_Button_Style"/>
+                    <Button android:id="@+id/buttonMeasureCoord" android:tag="测量点" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="1dp" android:text="坐标" android:drawableTop="@drawable/center1048" style="@style/toolbar_Button_Style"/>
+                    <Button android:id="@+id/buttonMeasureFree" android:tag="测量自由绘制" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="手绘" android:drawableTop="@drawable/freehand0148" style="@style/toolbar_Button_Style"/>
+                    <View android:layout_gravity="center" android:background="#ffffffff" android:layout_width="1dp" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp"/>
+                    <Button android:id="@+id/buttonMeasureAddGPS" android:tag="添加GPS点" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GPS" android:drawableTop="@drawable/m_zoom_gps2" style="@style/toolbar_Button_Style"/>
+                    <View android:layout_gravity="center" android:background="#ffffffff" android:layout_width="1dp" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp"/>
+                    <Button android:id="@+id/buttonMeasureUndo" android:tag="取消" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="撤消" android:drawableTop="@drawable/redo48" style="@style/toolbar_Button_Style"/>
+                    <Button android:id="@+id/buttonMeasureRedo" android:tag="重做" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="重做" android:drawableTop="@drawable/undo48" style="@style/toolbar_Button_Style"/>
+                    <View android:layout_gravity="center" android:background="#ffffffff" android:layout_width="1dp" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp"/>
+                    <Button android:id="@+id/buttonMeasureClear" android:tag="清空" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="清空" android:drawableTop="@drawable/clear_48" style="@style/toolbar_Button_Style"/>
+                    <View android:layout_gravity="center" android:background="#ffffffff" android:layout_width="1dp" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp"/>
+                    <Button android:id="@+id/buttonExit" android:tag="关闭工具" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="1dp" android:text="关闭" android:drawableTop="@drawable/close0148" style="@style/toolbar_Button_Style"/>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

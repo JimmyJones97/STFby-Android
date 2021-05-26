@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="当前项目坐标系参数:"/>
+        <LinearLayout android:id="@+id/ll_coorsystem" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="坐标系统："/>
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:id="@+id/tv_coorsystem" android:layout_width="match_parent" android:layout_height="wrap_content" android:text=""/>/&gt;\10
+        </LinearLayout>
+        <LinearLayout android:id="@+id/ll_centerjx" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="中央经线："/>
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:id="@+id/tv_centerjx" android:layout_width="match_parent" android:layout_height="wrap_content" android:text=""/>/&gt;\10
+        </LinearLayout>
+        <LinearLayout android:id="@+id/ll_transmethod" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:id="@+id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="转换方法："/>
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:id="@+id/tv_transmethod" android:layout_width="match_parent" android:layout_height="wrap_content" android:text=""/>/&gt;\10
+        </LinearLayout>
+        <LinearLayout android:id="@+id/ll_transparam" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:id="@+id/textView4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="转换参数："/>
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:id="@+id/tv_transparam" android:layout_width="match_parent" android:layout_height="wrap_content" android:text=""/>/&gt;\10
+        </LinearLayout>
+        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/buttonSaveSystem" android:tag="保存当前项目坐标系" android:background="@drawable/dialog_btn_selector" android:layout_width="match_parent" android:layout_height="50dp" android:layout_margin="5dp" android:text="保存当前项目坐标系" android:drawableLeft="@drawable/coordinatesystemsave"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="我的坐标系参数:"/>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="5dp">
+            <include android:id="@+id/prj_list" layout="@layout/mytable_listview"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

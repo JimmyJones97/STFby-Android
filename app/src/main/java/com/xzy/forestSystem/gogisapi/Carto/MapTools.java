@@ -1,0 +1,33 @@
+package  com.xzy.forestSystem.gogisapi.Carto;
+
+public enum MapTools {
+    Pan,
+    ZoomInOutPan,
+    ZoomIn,
+    ZoomOut,
+    Select,
+    FullScreen,
+    FullScreenSize,
+    Query,
+    None,
+    MeasureLength,
+    MeasureArea,
+    CallMile,
+    InsertVertex,
+    MoveVertex,
+    EditLine,
+    AddVertex,
+    DelVertex,
+    DelVertexInBox,
+    MoveObject,
+    Split,
+    MergeLine,
+    MergePolygon,
+    AddPoint,
+    AddPolyline,
+    AddPolygon,
+    Smooth,
+    GlobalMap,
+    ShutterTool,
+    ZoomByExtend
+}

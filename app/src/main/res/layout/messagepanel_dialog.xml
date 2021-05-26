@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/ll_MessagePanel" android:background="@drawable/tippanel_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="100dp" android:minHeight="50dp">
+    <ImageButton android:id="@+id/btn_MessageDialogClose" android:tag="关闭" android:background="@drawable/flatbutton_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:src="@drawable/close0132" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+    <TextView android:textColor="@color/myWhiteColor" android:id="@+id/tv_Message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="提示"/>
+    <ImageButton android:id="@+id/btn_MessageDialogClear" android:tag="清空" android:background="@drawable/flatbutton_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/clear_32" android:layout_toLeftOf="@+id/btn_MessageDialogClose" android:layout_alignTop="@+id/btn_MessageDialogClose"/>
+</RelativeLayout>

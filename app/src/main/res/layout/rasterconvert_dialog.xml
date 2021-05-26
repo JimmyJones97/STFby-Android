@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="10dp" android:layout_weight="1">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="数据文件:"/>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="文件路径:"/>
+            <EditText android:ellipsize="start" android:id="@+id/et_rasterconvert_filepath" android:focusable="false" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="" android:ems="10" android:scrollHorizontally="true" android:singleLine="true" android:editable="false" android:layout_weight="1"/>
+            <Button android:id="@+id/btn_rasterconvert_file" android:tag="选择文件" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text=" . . . " style="@style/Button_Style_Left"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="right|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="10dp">
+            <ScrollView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/dialog_txt_color" android:layout_gravity="top|left|center_vertical|center_horizontal|center" android:id="@+id/tv_rasterconvert_Fileinfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_weight="1"/>
+                </LinearLayout>
+            </ScrollView>
+            <Button android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_rasterconvert_LoadFile" android:tag="加载文件" android:background="@drawable/dialog_btn_selector" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="加载文件" android:drawableLeft="@drawable/import48" style="@style/Button_Style_Left"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="right|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="10dp">
+        <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:id="@+id/tv_compressQuality" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="压缩质量:"/>
+        <EditText android:id="@+id/et_compressQuality" android:layout_width="50dp" android:layout_height="wrap_content" android:text="70" android:ems="10" android:inputType="number"/>
+        <TextView android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_weight="1"/>
+        <Button android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_rasterconvert_StartConvert" android:tag="开始转换" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="开始转换" android:drawableLeft="@drawable/start48" style="@style/Button_Style_Left"/>
+    </LinearLayout>
+</LinearLayout>

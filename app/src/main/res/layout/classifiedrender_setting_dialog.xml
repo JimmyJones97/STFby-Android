@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/dialog_bg_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/dialog_headbar_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:textColor="@color/dialog_txt_color"
+            android:background="@drawable/dialog_headtext_corner_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="字段组合:" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.xzy.forestSystem.gogisapi.MyControls.InputSpinner
+                android:id="@+id/sp_labelGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/dialog_headbar_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:textColor="@color/dialog_txt_color"
+            android:background="@drawable/dialog_headtext_corner_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="默认符号:" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/dialog_txt_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/headbar_text_marginLeft"
+                android:text="符号：" />
+
+            <com.xzy.forestSystem.gogisapi.MyControls.ImageSpinnerDialog
+                android:id="@+id/sp_defaultSymbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/dialog_headbar_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:textColor="@color/dialog_txt_color"
+            android:background="@drawable/dialog_headtext_corner_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="组合值符号列表:" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:id="@+id/linearLayoutbottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_alignParentTop="true">
+
+            <Button
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/dialog_button_txt_color"
+                android:layout_gravity="center"
+                android:id="@+id/btn_DeleteItem"
+                android:tag="删除符号"
+                android:background="@drawable/dialog_btn_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="删除"
+                android:drawableLeft="@drawable/deleteobject"
+                android:layout_weight="1" />
+
+            <Button
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/dialog_button_txt_color"
+                android:layout_gravity="center"
+                android:id="@+id/btn_ReValues"
+                android:tag="重取值"
+                android:background="@drawable/dialog_btn_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="重取值"
+                android:drawableLeft="@drawable/restore48"
+                android:layout_weight="1" />
+
+            <Button
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/dialog_button_txt_color"
+                android:layout_gravity="center"
+                android:id="@+id/btn_AutoDefine"
+                android:tag="自定义"
+                android:background="@drawable/dialog_btn_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="自定义"
+                android:drawableLeft="@drawable/checklist1048"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/uniquesymbols_list"
+                layout="@layout/mytable_listview" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

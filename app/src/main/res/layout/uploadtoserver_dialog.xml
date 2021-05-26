@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="导出图层:"/>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/headbar_text_marginLeft" android:text="图层名称："/>
+            <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_localLayerList" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/headbar_text_marginLeft" android:text="导出条件："/>
+            <EditText android:id="@+id/et_condition" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="设置ID筛选条件,如ID&gt;10" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="空间数据库:"/>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/headbar_text_marginLeft" android:text="图层类型："/>
+            <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_ExportType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/headbar_text_marginLeft" android:text="图层名称："/>
+            <EditText android:id="@+id/et_NewLayerName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+            <LinearLayout android:gravity="center" android:id="@+id/ll_SpatialLayerList" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_SpatialLayerList" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                <Button android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_RefreshLayers" android:tag="刷新空间数据库图层" android:background="@drawable/dialog_btn_selector" android:layout_width="60dp" android:layout_height="match_parent" android:layout_margin="2dp" android:text="刷新"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/headbar_text_marginLeft" android:text="共享方式："/>
+            <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_ShareType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+            <Button android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_ShareUser" android:background="@drawable/dialog_btn_selector" android:layout_width="80dp" android:layout_height="match_parent" android:layout_margin="2dp" android:text="指定用户"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="right|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:layout_marginBottom="10dp">
+        <Button android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_LoginIn" android:tag="登入服务器" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_margin="1dp" android:text="登  陆" android:drawableLeft="@drawable/login0248"/>
+        <Button android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_OK" android:tag="上传数据" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_margin="1dp" android:text="上传数据" android:drawableLeft="@drawable/cloudupload48"/>
+    </LinearLayout>
+</LinearLayout>

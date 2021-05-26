@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="项目信息:"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/headbar_text_marginLeft" android:text="项目名称："/>
+                <EditText android:id="@+id/pn_projectname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="新建项目" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/headbar_text_marginLeft" android:text="图层模板："/>
+                <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_layertemplate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:id="@+id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/headbar_text_marginLeft" android:text="坐标系统："/>
+                <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_coorsystem" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@+id/ll_centerjx" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:id="@+id/textView4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/headbar_text_marginLeft" android:text="中央经线："/>
+                <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_centerjx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@+id/ll_Spheroid01" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/headbar_text_marginLeft" android:text="投影椭球："/>
+                <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_SpheroidName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@+id/ll_Spheroid02" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/headbar_text_marginLeft" android:text="长半径(m):"/>
+                <EditText android:id="@+id/et_SpheroidA" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="椭球的长轴" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@+id/ll_Spheroid03" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/headbar_text_marginLeft" android:text=" 扁 率 1/f  :"/>
+                <EditText android:id="@+id/et_Spheroidf" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="1/椭球的扁率" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@+id/ll_transmethod" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:id="@+id/textView5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/headbar_text_marginLeft" android:text="转换方法："/>
+                <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_transmethod" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="right|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_myCoordSelect" android:tag="我的坐标系" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="我的坐标系" android:drawableLeft="@drawable/point_m_coor" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_param" android:background="@drawable/dialog_headbar_bg" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="转换参数:"/>
+        <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:layout_marginRight="2dp">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                <include android:id="@+id/project_param_move" android:visibility="gone" layout="@layout/translate_param_move"/>
+                <include android:id="@+id/project_param_3" android:visibility="gone" layout="@layout/translate_param_3"/>
+                <include android:id="@+id/project_param_7" android:visibility="gone" layout="@layout/translate_param_7"/>
+                <include android:id="@+id/project_param_4" android:visibility="gone" layout="@layout/translate_param_4"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

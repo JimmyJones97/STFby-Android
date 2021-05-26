@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:id="@+id/tv_deviceInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="设备ID:********" android:layout_weight="1" android:lineSpacingExtra="5dp"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp">
+        <ImageView android:id="@+id/img_deviceID_QR" android:tag="设备二维码" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/app72" android:scaleType="centerCrop"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="5dp">
+        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/bt_deviceInfo_Share" android:tag="设备信息共享" android:background="@drawable/dialog_btn_selector" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="设备信息云共享" android:drawableLeft="@drawable/cloudupload" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

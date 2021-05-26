@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textColor="@color/dialog_txt_color" android:id="@+id/textViewTitle" android:background="@layout/x_bk_head_splitbar" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="数据导入"/>
+    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:id="@+id/textViewProgTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text=""/>
+    <ProgressBar android:id="@+id/progressBar1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="20dp" android:layout_marginRight="5dp" android:layout_marginBottom="20dp" style="?android:attr/progressBarStyleHorizontal"/>
+    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:id="@+id/textViewProgInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text=""/>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/buttonCancel" android:background="@drawable/dialog_btn_selector" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="取消操作" android:drawableLeft="@drawable/stop1048"/>
+    </LinearLayout>
+</LinearLayout>

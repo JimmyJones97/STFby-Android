@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="#ffffffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:background="@color/dialog_head_color" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/app"/>
+        <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="#ffffffff" android:id="@+id/headerbar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="录音"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:layout_marginBottom="30dp" android:layout_weight="1">
+        <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:textColor="@color/myBlackColor" android:id="@+id/textViewRecordTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="00:00:00"/>
+        <ImageView android:id="@+id/imageViewRecord" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/recorder_start48"/>
+        <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:textColor="@color/myBlackColor" android:id="@+id/textViewInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="准备录音"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/buttonExit" android:tag="退出" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="退出" android:layout_weight="1"/>
+        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/buttonOK" android:tag="开始录音" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="开始录音" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

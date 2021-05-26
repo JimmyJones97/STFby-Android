@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="horizontal" android:id="@+id/toolbar_track" android:background="@drawable/toolbar_shape" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <HorizontalScrollView android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+            <ScrollView android:layout_width="wrap_content" android:layout_height="match_parent">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/ll_toolbar_track" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/ToolabrTXTColor" android:id="@+id/tv_trackLine" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:layout_marginRight="3dp" android:text="足迹:"/>
+                    <CheckBox android:id="@+id/ck_TrackVisible" android:tag="足迹可见性" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:text="" style="@style/CustomCheckboxTheme"/>
+                    <Button android:id="@+id/bt_TrackStart" android:tag="开始记录足迹" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="开始" android:drawableTop="@drawable/play48" style="@style/toolbar_Button_Style"/>
+                    <View android:layout_gravity="center" android:background="#ffffffff" android:layout_width="1dp" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp"/>
+                    <Button android:id="@+id/bt_TrackLast" android:tag="上一个足迹点" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="上一点" android:drawableTop="@drawable/last0148" style="@style/toolbar_Button_Style"/>
+                    <Button android:id="@+id/bt_TrackNext" android:tag="下一个足迹点" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="下一点" android:drawableTop="@drawable/next0148" style="@style/toolbar_Button_Style"/>
+                    <View android:layout_gravity="center" android:background="#ffffffff" android:layout_width="1dp" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp"/>
+                    <Button android:id="@+id/bt_TrackQuery" android:tag="查询足迹" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="查询" android:drawableTop="@drawable/querytrack" style="@style/toolbar_Button_Style"/>
+                    <Button android:id="@+id/bt_Track_Clear" android:tag="清空足迹" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="清空" android:drawableTop="@drawable/clear_48" style="@style/toolbar_Button_Style"/>
+                    <View android:layout_gravity="center" android:background="#ffffffff" android:layout_width="1dp" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp"/>
+                    <Button android:id="@+id/bt_Track_Exit" android:tag="关闭工具" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="1dp" android:text="关闭" android:drawableTop="@drawable/close0148" style="@style/toolbar_Button_Style"/>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/rl_mapchild_dialog" android:background="@drawable/childmap_dialog_bg" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/ll_childmap_head" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+        <TextView android:textColor="@color/dialog_txt_color" android:id="@+id/tv_childMap_Title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="分屏:"/>
+        <TextView android:textColor="@color/dialog_txt_color" android:id="@+id/tv_childMap_Title2" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_weight="1"/>
+        <ImageButton android:id="@+id/btn_ChildMap_Collapse" android:tag="隐藏窗体" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:src="@drawable/collapse0132" android:scaleType="centerCrop" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+        <ImageButton android:id="@+id/btn_ChildMap_Close" android:tag="关闭" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/close0132" android:scaleType="centerCrop" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+    </LinearLayout>
+    <RelativeLayout android:id="@+id/rl_mapchild_map" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:id="@+id/ll_mapchild_dialog" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="1dp" android:layout_marginRight="1dp" android:layout_marginBottom="1dp" android:layout_alignParentLeft="true"/>
+        <LinearLayout android:gravity="right" android:orientation="horizontal" android:id="@+id/toolbar_tools" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="false" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+            <HorizontalScrollView android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <ScrollView android:layout_width="wrap_content" android:layout_height="match_parent">
+                        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_toolbar_tools" android:layout_width="match_parent" android:layout_height="match_parent">
+                            <ImageButton android:id="@+id/btn_ChildMap_Pan" android:tag="自由缩放" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:src="@drawable/childmap_pan" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+                            <ImageButton android:id="@+id/btn_ChildMap_Identify" android:tag="点击查询" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:src="@drawable/mb_info"/>
+                            <ImageButton android:id="@+id/btn_ChildMap_GPS" android:tag="GPS" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:src="@drawable/childmap_location"/>
+                            <ImageButton android:id="@+id/btn_ChildMap_ZoomIn" android:tag="单击放大" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:src="@drawable/zoomin48" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+                            <ImageButton android:id="@+id/btn_ChildMap_ZoomOut" android:tag="单击缩小" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:src="@drawable/zoomout48" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+                            <ImageButton android:id="@+id/btn_ChildMap_Layers" android:tag="图层" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:src="@drawable/layerlist2" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+                            <ImageButton android:id="@+id/btn_ChildMap_Link" android:tag="关联" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:src="@drawable/childmap_linkmap" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

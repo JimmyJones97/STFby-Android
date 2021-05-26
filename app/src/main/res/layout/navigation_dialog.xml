@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp" android:layout_above="@+id/linearLayoutbottom">
+            <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="导航目标列表:"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <include android:id="@+id/navPtn_list" layout="@layout/mytable_listview"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <Button android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_Nav_Clear" android:tag="清空" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="清空目标" android:drawableLeft="@drawable/clear_48" android:layout_weight="1.5" style="@style/Button_Style_Left"/>
+                <Button android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_Nav_AddNavObj" android:tag="添加导航目标" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:text="添加导航目标" android:drawableLeft="@drawable/selectobject48" android:layout_weight="1" style="@style/Button_Style_Left"/>
+                <Button android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_Nav_OtherApp" android:tag="导航软件" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="导航软件" android:drawableLeft="@drawable/addpoint2048" android:layout_weight="1" style="@style/Button_Style_Left"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="bottom" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/linearLayoutbottom" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:layout_alignParentBottom="true">
+            <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="导航设置："/>
+            <LinearLayout android:gravity="bottom" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/cb_Nav_ShowNavLine" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="地图导航线"/>
+                    <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/cb_Nav_ShowNavPtnInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="导航点信息"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/cb_Nav_AlarmNav" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="目标距离提醒"/>
+                    <EditText android:id="@+id/et_Nav_AlarmDis" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="1000.0" android:ems="10" android:layout_weight="1" android:inputType="numberDecimal"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

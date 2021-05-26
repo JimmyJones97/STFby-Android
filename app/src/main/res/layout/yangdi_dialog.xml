@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="基本信息:"/>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="80dp" android:layout_height="wrap_content" android:text="省区："/>
+                    <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_Yangdi01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="80dp" android:layout_height="wrap_content" android:text="县局："/>
+                    <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_Yangdi02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="80dp" android:layout_height="wrap_content" android:text="乡镇场："/>
+                    <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_Yangdi03" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="80dp" android:layout_height="wrap_content" android:text="村："/>
+                    <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_Yangdi04" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="80dp" android:layout_height="wrap_content" android:text="图斑："/>
+                    <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_Yangdi05" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="80dp" android:layout_height="wrap_content" android:text="样地号："/>
+                    <com.xzy.forestSystem.gogisapi.MyControls.InputSpinner android:id="@+id/sp_Yangdi06" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/ll_AutoGetInfo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+                    <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="right" android:id="@+id/btn_AutoGetInfo" android:tag="自动识别图斑信息" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="自动识别图斑信息" android:drawableLeft="@drawable/addinmapcenter" android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="坐标信息:"/>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="80dp" android:layout_height="wrap_content" android:text="X："/>
+                    <EditText android:id="@+id/et_X" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="80dp" android:layout_height="wrap_content" android:text="Y："/>
+                    <EditText android:id="@+id/et_Y" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">&quot;\10
+                    <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="right" android:id="@+id/btn_FromGPS" android:tag="GPS采样" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="GPS" android:layout_weight="1"/>
+                    <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="right" android:id="@+id/btn_FromMapCenter" android:tag="地图中心" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="地图中心" android:layout_weight="1"/>
+                    <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="right" android:id="@+id/btn_FromMeasure" android:tag="测量点" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="测量点" android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="版本序号："/>
+            <EditText android:gravity="top|left|center_vertical|center_horizontal|center" android:id="@+id/editTextVersion" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:ems="10" android:editable="false" android:layout_weight="1" android:inputType="textMultiLine"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp" android:layout_weight="1">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:gravity="top" android:layout_gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="更新说明："/>
+            <EditText android:gravity="top|left|center_vertical|center_horizontal|center" android:autoLink="web|email|phone" android:id="@+id/editTextDescp" android:focusable="false" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="" android:ems="10" android:editable="false" android:layout_weight="1" android:inputType="textMultiLine"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/buttonStartUpdate" android:tag="开始更新" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="开始更新" android:drawableLeft="@drawable/download"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

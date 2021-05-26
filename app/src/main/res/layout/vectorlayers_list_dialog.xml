@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="match_parent">
+            <ListView android:id="@+id/listView_vectorLayers" android:scrollbars="horizontal|vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:scrollingCache="false" android:cacheColorHint="#00000000" android:layout_weight="1" android:headerDividersEnabled="false" android:footerDividersEnabled="false"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+    <RelativeLayout android:gravity="center_vertical" android:id="@+id/rl_bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:id="@+id/buttonSelectAll" android:tag="全选" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="全选" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:id="@+id/buttonSelectDe" android:tag="反选" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="反选" android:layout_toRightOf="@+id/buttonSelectAll" android:layout_centerInParent="false" android:layout_centerVertical="true"/>
+        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_vectorLayersManag" android:tag="底图管理" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="底图管理" android:drawableLeft="@drawable/management0348" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</LinearLayout>

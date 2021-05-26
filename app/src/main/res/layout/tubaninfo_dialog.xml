@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="基本信息:"/>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="80dp" android:layout_height="wrap_content" android:text="省区："/>
+                    <com.xzy.forestSystem.gogisapi.MyControls.InputSpinner android:id="@+id/sp_Yangdi01" android:tag="省" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="60dp" android:layout_height="wrap_content" android:text="县局："/>
+                    <com.xzy.forestSystem.gogisapi.MyControls.InputSpinner android:id="@+id/sp_Yangdi02" android:tag="县" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="80dp" android:layout_height="wrap_content" android:text="乡镇场："/>
+                    <com.xzy.forestSystem.gogisapi.MyControls.InputSpinner android:id="@+id/sp_Yangdi03" android:tag="乡镇" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="60dp" android:layout_height="wrap_content" android:text="村："/>
+                    <com.xzy.forestSystem.gogisapi.MyControls.InputSpinner android:id="@+id/sp_Yangdi04" android:tag="村" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="80dp" android:layout_height="wrap_content" android:text="图斑号："/>
+                    <EditText android:id="@+id/et_TuBanHao" android:tag="图斑号" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_weight="1" android:inputType="number"/>
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="60dp" android:layout_height="match_parent" android:text="调查年度："/>
+                    <EditText android:id="@+id/et_DiaoChaNian" android:tag="调查年度" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2018" android:layout_weight="1" android:inputType="number"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="80dp" android:layout_height="wrap_content" android:text="前期影像时间："/>
+                    <EditText android:id="@+id/et_QianQiYXTime" android:tag="前期影像时间" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_weight="1" android:inputType="number"/>
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="80dp" android:layout_height="match_parent" android:text="后期影像时间："/>
+                    <EditText android:id="@+id/et_HouQiYXTime" android:tag="后期影像时间" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_weight="1" android:inputType="number"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp">
+                <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="室内判读因子:"/>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="100dp" android:layout_height="wrap_content" android:text="横坐标："/>
+                    <EditText android:id="@+id/et_X" android:tag="横坐标" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.0" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="80dp" android:layout_height="wrap_content" android:text="纵坐标："/>
+                    <EditText android:id="@+id/et_Y" android:tag="纵坐标" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.0" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="100dp" android:layout_height="wrap_content" android:text="判读面积："/>
+                    <EditText android:id="@+id/et_PanDuArea" android:tag="判读面积" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.0" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:visibility="invisible" android:layout_width="80dp" android:layout_height="match_parent" android:text="纵坐标："/>
+                    <EditText android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="2018" android:layout_weight="1" android:inputType="number"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="top|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="top|right|center_vertical|center_horizontal|center" android:layout_gravity="right" android:layout_width="100dp" android:layout_height="wrap_content" android:text="备注："/>
+                    <EditText android:id="@+id/et_PanDuRemark" android:tag="室内判读备注" android:layout_width="wrap_content" android:layout_height="80dp" android:ems="10" android:layout_weight="1" android:inputType="textMultiLine"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp">
+                <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="现地验证因子:"/>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="100dp" android:layout_height="wrap_content" android:text="前地类："/>
+                    <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_QianDiLei" android:tag="前地类" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="100dp" android:layout_height="wrap_content" android:text="现地类："/>
+                    <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_XianDiLei" android:tag="现地类" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="重点生态区域名称："/>
+                    <EditText android:id="@+id/et_ZhongDianQuyuName" android:tag="重点生态区域名称" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <HorizontalScrollView android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                                <LinearLayout android:gravity="left" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="330dp" android:layout_height="wrap_content" android:text="改变林地用途或采伐林木面积："/>
+                                    <EditText android:id="@+id/et_GaiBianLindiArea" android:tag="改变林地用途或采伐林木面积" android:layout_width="match_parent" android:layout_height="wrap_content" android:minWidth="100dp" android:text="0" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+                                    <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/btn_GetArea01" android:tag="获取面积" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:text="" android:drawableLeft="@drawable/area"/>
+                                    <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/btn_GetArea02" android:tag="拾取面积" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_margin="5dp" android:text="拾取"/>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="left" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="330dp" android:layout_height="wrap_content" android:text="违法违规改变林地用途或采伐林木面积："/>
+                                    <EditText android:id="@+id/et_WeiGuiGaiBianLindiArea" android:tag="违法违规改变林地用途或采伐林木面积" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="100dp" android:text="0" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+                                    <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/btn_GetArea03" android:tag="获取面积2" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:text="" android:drawableLeft="@drawable/area"/>
+                                    <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/btn_GetArea04" android:tag="拾取面积2" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_margin="5dp" android:text="拾取"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="200dp" android:layout_height="wrap_content" android:text="采伐林木蓄积："/>
+                    <EditText android:id="@+id/et_CaiFaLinMuXuJi" android:tag="采伐林木蓄积" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+                    <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/btn_CalXuJi" android:tag="计算蓄积" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_margin="5dp" android:text="计算"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="200dp" android:layout_height="wrap_content" android:text="违法违规采伐林木蓄积："/>
+                    <EditText android:id="@+id/et_WeiFaWeiGuiCaiFaLinMuXuJi" android:tag="违法违规采伐林木蓄积" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+                    <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/btn_CalXuJi2" android:tag="计算蓄积2" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_margin="5dp" android:text="计算"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="170dp" android:layout_height="wrap_content" android:text="图斑变化原因："/>
+                    <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_TubanBianHuaYY" android:tag="图斑变化原因" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="170dp" android:layout_height="wrap_content" android:text="检查级别："/>
+                    <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_JianChaClass" android:tag="检查级别" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="170dp" android:layout_height="wrap_content" android:text="检查结果是否一致："/>
+                    <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_JianChaJieGuoSame" android:tag="检查结果是否一致" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="top|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="top|right|center_vertical|center_horizontal|center" android:layout_gravity="right" android:layout_width="100dp" android:layout_height="wrap_content" android:text="备注："/>
+                    <EditText android:id="@+id/et_XianDiRemark" android:tag="现地验证备注" android:layout_width="wrap_content" android:layout_height="80dp" android:ems="10" android:layout_weight="1" android:inputType="textMultiLine"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp">
+                <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="检查信息:"/>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:id="@+id/tv_JianChaPart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="检查单位名称："/>
+                    <EditText android:id="@+id/et_JianChaPart" android:tag="检查单位名称" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:id="@+id/tv_JianChaUser" android:layout_width="100dp" android:layout_height="wrap_content" android:text="检查人员："/>
+                    <EditText android:id="@+id/et_JianChaUser" android:tag="检查人员" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_weight="1"/>
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="100dp" android:layout_height="wrap_content" android:text="检查时间："/>
+                    <EditText android:id="@+id/et_JianChaTime" android:tag="检查日期" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2018" android:layout_weight="1" android:inputType="number"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/btn_Nav" android:tag="导航" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="导航" android:drawableLeft="@drawable/navgoto48"/>
+        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/btn_More" android:tag="更多属性" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:text="" android:drawableLeft="@drawable/morewhite48"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_weight="1"/>
+        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:gravity="center" android:id="@+id/btn_mediaMang" android:tag="多媒体" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="[0]照片" android:drawableLeft="@drawable/mediamanag"/>
+    </LinearLayout>
+</LinearLayout>

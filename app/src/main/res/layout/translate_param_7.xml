@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="X平移(米):"/>
+        <EditText android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="center" android:id="@+id/pp7_p1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Y平移(米):"/>
+        <EditText android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="center" android:id="@+id/pp7_p2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Z平移(米):"/>
+        <EditText android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="center" android:id="@+id/pp7_p3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="X旋转(秒):"/>
+        <EditText android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="center" android:id="@+id/pp7_p4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Y旋转(秒):"/>
+        <EditText android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="center" android:id="@+id/pp7_p5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Z旋转(秒):"/>
+        <EditText android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="center" android:id="@+id/pp7_p6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="尺度因子[K]:"/>
+        <EditText android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:gravity="center" android:id="@+id/pp7_p7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="right" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:textAppearance="?android:attr/textAppearanceMedium" android:id="@+id/formtemp_1" android:tag="七参计算器" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="七参计算器    " android:drawableLeft="@drawable/calculator1548"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

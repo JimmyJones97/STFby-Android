@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/dialog_bg_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/dialog_headbar_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:textColor="@color/dialog_txt_color"
+            android:background="@drawable/dialog_headtext_corner_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="字段设置:" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/dialog_txt_color"
+                android:gravity="right"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="树种字段：" />
+
+            <com.xzy.forestSystem.gogisapi.MyControls.AutoInputSpinner
+                android:id="@+id/et_BasicInput01"
+                android:tag="树种字段"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/dialog_txt_color"
+                android:gravity="right"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="胸径字段：" />
+
+            <com.xzy.forestSystem.gogisapi.MyControls.AutoInputSpinner
+                android:id="@+id/et_BasicInput02"
+                android:tag="胸径字段"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/dialog_txt_color"
+                android:gravity="right"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="树高字段：" />
+
+            <com.xzy.forestSystem.gogisapi.MyControls.AutoInputSpinner
+                android:id="@+id/et_BasicInput03"
+                android:tag="树高字段"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/dialog_txt_color"
+                android:gravity="right"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="株树字段：" />
+
+            <com.xzy.forestSystem.gogisapi.MyControls.AutoInputSpinner
+                android:id="@+id/et_BasicInput04"
+                android:tag="株树字段"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/dialog_txt_color"
+                android:gravity="right"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="蓄积字段：" />
+
+            <com.xzy.forestSystem.gogisapi.MyControls.AutoInputSpinner
+                android:id="@+id/et_BasicInput05"
+                android:tag="蓄积字段"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">&quot;\10
+
+        <Button
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/dialog_button_txt_color"
+            android:layout_gravity="right"
+            android:id="@+id/btn_Cal"
+            android:tag="计算蓄积"
+            android:background="@drawable/dialog_btn_selector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="计算蓄积"
+            android:drawableLeft="@drawable/calculator0848"
+            android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>

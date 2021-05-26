@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="基本信息:"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="50dp">
+            <TextView android:textColor="@color/myBlackColor" android:id="@+id/tv_Content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="SSF"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="10dp" android:layout_weight="1">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="备注信息:"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <EditText android:textColor="@color/dialog_txt_color" android:gravity="top" android:id="@+id/et_txtContent" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp" android:text="" android:ems="10" android:inputType="textMultiLine"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

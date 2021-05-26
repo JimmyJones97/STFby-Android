@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="horizontal" android:id="@+id/toolbar_senlinducha" android:background="@drawable/toolbar_shape" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <HorizontalScrollView android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+            <ScrollView android:layout_width="wrap_content" android:layout_height="match_parent">
+                <LinearLayout android:orientation="horizontal" android:id="@+id/ll_toolbar_senlinducha" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <Button android:id="@+id/buttonSLDC_Setting" android:tag="设置" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="设置" android:drawableTop="@drawable/login0248" style="@style/toolbar_Button_Style"/>
+                    <View android:background="#ffffffff" android:layout_width="1dp" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp"/>
+                    <Button android:id="@+id/buttonSLDC_YDDC" android:tag="样地调查" android:background="@drawable/toolbar_btn_selector" android:layout_width="48dp" android:layout_height="wrap_content" android:text="样地调查" android:drawableTop="@drawable/diaocha0248" style="@style/toolbar_Button_Style"/>
+                    <Button android:id="@+id/buttonSLDC_YDCX" android:tag="样地查询" android:background="@drawable/toolbar_btn_selector" android:layout_width="48dp" android:layout_height="wrap_content" android:text="样地查询" android:drawableTop="@drawable/diaocha0148" style="@style/toolbar_Button_Style"/>
+                    <View android:background="#ffffffff" android:layout_width="1dp" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp"/>
+                    <Button android:id="@+id/buttonSLDC_TBExport" android:tag="图斑导出" android:background="@drawable/toolbar_btn_selector" android:layout_width="48dp" android:layout_height="wrap_content" android:text="图斑导出" android:drawableTop="@drawable/clouddown48" style="@style/toolbar_Button_Style"/>
+                    <View android:layout_gravity="center" android:background="#ffffffff" android:layout_width="1dp" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp"/>
+                    <Button android:id="@+id/buttonSLDC_Exit" android:tag="关闭工具" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="1dp" android:text="关闭" android:drawableTop="@drawable/close0148" style="@style/toolbar_Button_Style"/>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

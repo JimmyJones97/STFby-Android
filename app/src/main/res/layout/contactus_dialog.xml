@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginTop="10dp">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:autoLink="web|email|phone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="联系地址: " android:lineSpacingExtra="5dp"/>
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:autoLink="web|email|phone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="贵阳市富水南路196号贵州国际商城四号塔楼21层" android:layout_weight="1" android:lineSpacingExtra="5dp"/>
+            </LinearLayout>
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:autoLink="web|email|phone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="技术支持: 17731051282" android:layout_weight="1" android:lineSpacingExtra="5dp"/>
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:autoLink="web|email|phone" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="QQ群: 567286744\10          (森林资源采集软件交流)" android:layout_weight="1" android:lineSpacingExtra="5dp"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView1" android:visibility="gone" android:layout_width="190dp" android:layout_height="261dp" android:layout_marginBottom="10dp" android:src="@drawable/qqqrcode"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

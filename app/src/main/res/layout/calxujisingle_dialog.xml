@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:paddingTop="15dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp">
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="120dp" android:layout_height="wrap_content" android:text="树种组:" style="@style/xuji_FieldTxt"/>
+                <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_treeType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/btn_clear" android:tag="清空" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="清空"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp">
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="140dp" android:layout_height="wrap_content" android:text="平均树高(m):" style="@style/xuji_FieldTxt"/>
+                <EditText android:id="@+id/et_PJSG" android:layout_weight="1" android:inputType="numberDecimal" style="@style/tableInput">
+                    <requestFocus/>
+                </EditText>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp">
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="140dp" android:layout_height="wrap_content" android:text="平均胸径(cm):" style="@style/xuji_FieldTxt"/>
+                <EditText android:id="@+id/et_PJXJ" android:layout_weight="1" android:inputType="numberDecimal" style="@style/tableInput"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp">
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="140dp" android:layout_height="wrap_content" android:text="株数:" style="@style/xuji_FieldTxt"/>
+                <EditText android:id="@+id/et_TreeCount" android:text="1" android:layout_weight="1" android:inputType="number" style="@style/tableInput"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp">
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="120dp" android:layout_height="wrap_content" android:text="单株蓄积:" style="@style/xuji_FieldTxt"/>
+                <EditText android:enabled="false" android:id="@+id/et_XuJiSingle" android:layout_weight="1" style="@style/tableInput"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp">
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="120dp" android:layout_height="wrap_content" android:text="总蓄积量:" style="@style/xuji_FieldTxt"/>
+                <EditText android:enabled="false" android:id="@+id/et_XuJiTotal" android:layout_weight="1" style="@style/tableInput"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp">
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/btn_setting" android:tag="参数设置" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_margin="5dp" android:text="设置"/>
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_weight="1"/>
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/btn_calXJL" android:tag="蓄积量计算" android:background="@drawable/dialog_btn_selector" android:layout_width="120dp" android:layout_height="40dp" android:layout_margin="5dp" android:text="计算"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp">
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myRedColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="使用说明：1.选择树种组；2.填写平均高和平均胸径；3.如果有多株的情况,输入株数；4.单击计算按钮计算。"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

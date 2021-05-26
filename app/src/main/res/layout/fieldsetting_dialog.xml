@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:layout_weight="1">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="字段关联列表:"/>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textColor="@color/dialog_txt_color" android:gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="督查图层："/>
+            <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_DuChaLayer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp">
+            <TextView android:textSize="18sp" android:textColor="@color/myBlueColor" android:gravity="center" android:background="@drawable/bg_withborder01" android:paddingTop="5dp" android:paddingBottom="5dp" android:layout_width="150dp" android:layout_height="wrap_content" android:text="检查字段"/>
+            <TextView android:textSize="18sp" android:textColor="@color/myBlueColor" android:gravity="center" android:background="@drawable/bg_withborder01" android:paddingTop="5dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="图层字段" android:layout_weight="1"/>
+        </LinearLayout>
+        <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1">
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_Yangdi_DataList" android:layout_width="match_parent" android:layout_height="match_parent" android:minHeight="100dp" android:layout_weight="1"/>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

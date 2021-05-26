@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/ll_colorpickerView" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/ll_hs"/>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/ll_hs" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="10dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="透明度："/>
+            <SeekBar android:id="@+id/sb_transp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:max="255" android:progress="255" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="颜色选择结果:"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="  R："/>
+                <EditText android:enabled="false" android:id="@+id/et_r" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numeric="integer" android:layout_weight="1"/>
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="  G："/>
+                <EditText android:enabled="false" android:id="@+id/et_g" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numeric="integer" android:layout_weight="1"/>
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="  B："/>
+                <EditText android:enabled="false" android:id="@+id/et_b" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:numeric="integer" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="  #："/>
+                <EditText android:layout_gravity="center_vertical" android:id="@+id/et_result" android:tag="255" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="2"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

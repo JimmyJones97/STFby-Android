@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffbfbfbf"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dialog_head_color">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:src="@drawable/app" />
+
+        <TextView
+            android:id="@+id/headerbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="标题"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ffffffff" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true">
+
+            <requestFocus />
+        </androidx.viewpager.widget.ViewPager>
+
+        <ImageView
+            android:id="@+id/img_ViewLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/mb_button_selector"
+            android:src="@drawable/mb_left"
+            android:tag="上一个文件" />
+
+        <ImageView
+            android:id="@+id/img_ViewRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/mb_button_selector"
+            android:src="@drawable/mb_right"
+            android:tag="下一个文件" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="5dp"
+        android:gravity="bottom">
+
+        <Button
+            android:id="@+id/buttonAddPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_btn_selector"
+            android:drawableLeft="@drawable/addpicture48"
+            android:tag="照片"
+            android:text="照片"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/dialog_button_txt_color" />
+
+        <Button
+            android:id="@+id/buttonAddAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_btn_selector"
+            android:drawableLeft="@drawable/addaudio48"
+            android:tag="语音"
+            android:text="语音"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/dialog_button_txt_color" />
+
+        <Button
+            android:id="@+id/buttonAddVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_btn_selector"
+            android:drawableLeft="@drawable/addvideo48"
+            android:tag="视频"
+            android:text="视频"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/dialog_button_txt_color" />
+
+        <Button
+            android:id="@+id/buttonDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_btn_selector"
+            android:drawableLeft="@drawable/deleteobject"
+            android:tag="删除"
+            android:text="删除"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/dialog_button_txt_color" />
+
+        <Button
+            android:id="@+id/buttonOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_btn_selector"
+            android:drawableLeft="@drawable/ok_white"
+            android:tag="完成"
+            android:text="完成"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/dialog_button_txt_color" />
+    </LinearLayout>
+</LinearLayout>

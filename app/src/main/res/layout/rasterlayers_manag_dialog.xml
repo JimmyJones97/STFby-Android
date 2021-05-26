@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <HorizontalScrollView android:id="@+id/horizontalScrollView1" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/bottom">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="match_parent">
+                <ListView android:id="@+id/listViewRasterLayers" android:scrollbars="horizontal|vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:scrollingCache="false" android:cacheColorHint="#00000000" android:layout_weight="1" android:headerDividersEnabled="false" android:footerDividersEnabled="false"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+        <LinearLayout android:orientation="vertical" android:id="@+id/bottom" android:background="@color/myWhiteColor" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_selectOrDe" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/buttonSelectAll" android:tag="全选" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="全选"/>
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/buttonSelectDe" android:tag="反选" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="反选"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:background="@color/myWhiteColor" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_expandMore" android:tag="更多工具" android:background="@drawable/flatbutton_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:text="" android:drawableLeft="@drawable/expandmore0248" android:layout_alignParentRight="true"/>
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/buttonAddLocal" android:tag="添加本地栅格图层" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="添加本地文件" android:layout_weight="1"/>
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/buttonAddNet" android:tag="添加网络地图" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:text="添加网络地图" android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

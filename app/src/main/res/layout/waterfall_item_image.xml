@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:padding="1dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.stczh.otherlibs.Waterfall.ScaleImageView android:id="@+id/Waterfall_ScaleImageView" android:padding="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@null" android:scaleType="fitXY"/>
+    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myRedColor" android:gravity="center_horizontal" android:id="@+id/Waterfall_TextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="文字" android:ems="10"/>
+</RelativeLayout>

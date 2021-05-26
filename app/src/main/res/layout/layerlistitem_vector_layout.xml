@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/imgtxt_listitem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/layerlistitem_bg"
+        android:gravity="left|center_vertical|center_horizontal|center"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <CheckBox
+                android:id="@+id/imgtxt_itemcheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:focusable="false" />
+
+            <ImageView
+                android:id="@+id/imgtxt_layerTpye"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:background="@drawable/toolbar_btn_selector"
+                android:scaleType="centerCrop"
+                android:src="@drawable/layer_point" />
+
+            <TextView
+                android:id="@+id/imgtxt_itemtext1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/toolbar_btn_selector"
+                android:gravity="left|center_vertical|center_horizontal|center"
+                android:minWidth="140dp"
+                android:text="图层"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/myBlackColor" />
+        </LinearLayout>
+
+        <View
+            style="@style/layer_listItem_linestyle"
+            android:layout_width="match_parent" />
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/imgtxt_itemimage1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/toolbar_btn_selector"
+                    android:scaleType="centerInside" />
+
+                <com.xzy.forestSystem.gogisapi.MyControls.NumberCircleProgressBar
+                    android:id="@+id/progressBar_transp"
+                    style="@style/NumberCircleProgressBar_Default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp" />
+
+                <ImageView
+                    android:id="@+id/imgtxt_itemimage2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/toolbar_btn_selector"
+                    android:scaleType="center"
+                    android:src="@drawable/layerrender" />
+
+                <ImageView
+                    android:id="@+id/imgtxt_itemimage3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/toolbar_btn_selector"
+                    android:scaleType="center"
+                    android:src="@drawable/layerattrib_edit" />
+
+                <ImageView
+                    android:id="@+id/imgtxt_itemimage7"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/toolbar_btn_selector"
+                    android:scaleType="center"
+                    android:src="@drawable/rebuilddata48" />
+
+                <ImageView
+                    android:id="@+id/imgtxt_itemimage4"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/toolbar_btn_selector"
+                    android:scaleType="center"
+                    android:src="@drawable/up1348" />
+
+                <ImageView
+                    android:id="@+id/imgtxt_itemimage5"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/toolbar_btn_selector"
+                    android:scaleType="center"
+                    android:src="@drawable/down1348" />
+
+                <ImageView
+                    android:id="@+id/imgtxt_itemimage6"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/toolbar_btn_selector"
+                    android:scaleType="center"
+                    android:src="@drawable/deleteobject" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+</LinearLayout>

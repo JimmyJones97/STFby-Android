@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="smssdk_DialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="AppBaseTheme" parent="@android:style/Theme.Light">
+    </style>
+    <style name="AppTheme" parent="@style/AppBaseTheme">
+    </style>
+    <style name="text_default_Red">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#ffff0000</item>
+    </style>
+    <style name="text_default_White">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="text_menu_back">
+        <item name="android:background">#ffededed</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="layout_transparent_back">
+        <item name="android:background">#00000000</item>
+    </style>
+    <style name="dialog_Button01" parent="@android:style/Widget.Button">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/dialog_txt_color</item>
+        <item name="android:gravity">left|center_horizontal|clip_horizontal</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="text_default_Black">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/dialog_txt_color</item>
+    </style>
+    <style name="text_default_BlueBg">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:background">#ff0000ff</item>
+    </style>
+    <style name="menu_Button_Style" parent="@android:style/Widget.Button">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/dialog_txt_color</item>
+        <item name="android:gravity">left|center_horizontal|clip_horizontal</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="toolbar_Button_Style" parent="@android:style/Widget.Button">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/ToolabrTXTColor</item>
+        <item name="android:gravity">left|center_horizontal|clip_horizontal</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:width">45dp</item>
+    </style>
+    <style name="toolbar_MenuButton_Style" parent="@android:style/Widget.Button">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/ToolabrTXTColor</item>
+        <item name="android:gravity">left|center_horizontal|clip_horizontal</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:width">60dp</item>
+    </style>
+    <style name="Button_Style_Left" parent="@android:style/Widget.Button">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/dialog_txt_color</item>
+        <item name="android:gravity">left|center_horizontal|clip_horizontal</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="toolbar_style">
+        <item name="android:background">#ffededed</item>
+    </style>
+    <style name="NumberCircleProgressBar_Default">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="progress">255</item>
+        <item name="max">255</item>
+        <item name="progress_unreached_color">#ffcccccc</item>
+        <item name="progress_reached_color">#ff3498db</item>
+        <item name="progress_text_size">10sp</item>
+        <item name="progress_text_color">#ff000000</item>
+        <item name="progress_circle_radius">20dp</item>
+    </style>
+    <style name="NumberCircleProgressBar_Passing_Green">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="progress">20</item>
+        <item name="max">100</item>
+        <item name="progress_unreached_color">#ffcccccc</item>
+        <item name="progress_reached_color">#ff70a800</item>
+        <item name="progress_text_size">11sp</item>
+        <item name="progress_text_color">#ffffffff</item>
+        <item name="progress_circle_radius">25dp</item>
+    </style>
+    <style name="NumberCircleProgressBar_Beauty_Red">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="progress">30</item>
+        <item name="max">100</item>
+        <item name="progress_unreached_color">#ffcccccc</item>
+        <item name="progress_reached_color">#ffff3d7f</item>
+        <item name="progress_text_size">12sp</item>
+        <item name="progress_text_color">#ff000000</item>
+        <item name="progress_circle_radius">30dp</item>
+    </style>
+    <style name="NumberCircleProgressBar_Warning_Red">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="progress">40</item>
+        <item name="max">100</item>
+        <item name="progress_unreached_color">#ffcccccc</item>
+        <item name="progress_reached_color">#ffe74c3c</item>
+        <item name="progress_text_size">13sp</item>
+        <item name="progress_text_color">#ffffffff</item>
+        <item name="progress_circle_radius">35dp</item>
+    </style>
+    <style name="NumberCircleProgressBar_Relax_Blue">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="progress">50</item>
+        <item name="max">100</item>
+        <item name="progress_unreached_color">#ffcccccc</item>
+        <item name="progress_reached_color">#ff6dbcdb</item>
+        <item name="progress_text_size">14sp</item>
+        <item name="progress_text_color">#ff000000</item>
+        <item name="progress_circle_radius">40dp</item>
+    </style>
+    <style name="NumberCircleProgressBar_Grace_Yellow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="progress">60</item>
+        <item name="max">100</item>
+        <item name="progress_unreached_color">#ffcccccc</item>
+        <item name="progress_reached_color">#ffffc73b</item>
+        <item name="progress_text_size">15sp</item>
+        <item name="progress_text_color">#ffffffff</item>
+        <item name="progress_circle_radius">45dp</item>
+    </style>
+    <style name="NumberCircleProgressBar_Funny_Orange">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="progress">@null</item>
+        <item name="max">100</item>
+        <item name="progress_unreached_color">#ffcccccc</item>
+        <item name="progress_reached_color">#ffff530d</item>
+        <item name="progress_text_size">10sp</item>
+        <item name="progress_text_color">#ffff530d</item>
+    </style>
+    <style name="NumberCircleProgressBar_Twinkle_Night">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="progress">@null</item>
+        <item name="max">100</item>
+        <item name="progress_unreached_color">#ffcccccc</item>
+        <item name="progress_reached_color">#ffecf0f1</item>
+        <item name="progress_text_size">10sp</item>
+        <item name="progress_text_color">#ffecf0f1</item>
+    </style>
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateVisible|adjustResize</item>
+    </style>
+    <style name="CustomProgressDialog" parent="@style/CustomDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="toolbox_Button" parent="@android:style/Widget.Button">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/dialog_txt_color</item>
+        <item name="android:gravity">left|center_horizontal|clip_horizontal</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="systemSetting_Text" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="text_Camera_shadow">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:shadowColor">#ff000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_button_style</item>
+    </style>
+    <style name="MainMenuDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:backgroundDimAmount">0.8</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="MainMenuDialogAnimR2L" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/menudialog_show</item>
+        <item name="android:windowExitAnimation">@anim/menudialog_hide</item>
+    </style>
+    <style name="MainMenuDialogAnimR2LB2T" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/menudialog_show_r2l_b2t</item>
+        <item name="android:windowExitAnimation">@anim/menudialog_hide_r2l_b2t</item>
+    </style>
+    <style name="MB_Button_Style" parent="@android:style/Widget.ImageButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+    <style name="Dialog_Fullscreen">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Simple_Dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+    <style name="Loading_Dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+    <style name="layer_listItem_linestyle">
+        <item name="android:background">@color/myorange</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+    <style name="tableRow">
+        <item name="android:gravity">left|center_horizontal|clip_horizontal</item>
+        <item name="android:layout_gravity">left|center_horizontal|clip_horizontal</item>
+        <item name="android:padding">5sp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="xuji_FieldTxt">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">right</item>
+        <item name="android:layout_gravity">left|center_horizontal|clip_horizontal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="tableInput">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">left|center_horizontal|clip_horizontal</item>
+        <item name="android:layout_width">150sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">number|numberPassword</item>
+    </style>
+    <style name="MenuItemAnimB2T" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/menudialog_show</item>
+        <item name="android:windowExitAnimation">@anim/menudialog_hide_r2l_b2t</item>
+    </style>
+</resources>

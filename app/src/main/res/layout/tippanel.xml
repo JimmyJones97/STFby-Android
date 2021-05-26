@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/ll_TipPanel" android:background="@drawable/tippanel_bg" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:id="@+id/tv_TipPanel" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="提示"/>
+</LinearLayout>

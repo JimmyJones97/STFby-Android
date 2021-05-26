@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="采集状态:"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="点数："/>
+                <com.xzy.forestSystem.gogisapi.MyControls.InputSpinner android:id="@+id/sp_gatherGPSCount" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="已采集："/>
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myRedColor" android:id="@+id/tv_hasGatherPtnCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0"/>
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:gravity="center" android:id="@+id/btn_AddGPSPtn_StartStop" android:tag="开始GPS数据采样" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="" android:drawableLeft="@drawable/start1148"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_consideConvert" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="考虑参数校正"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="采集坐标信息:"/>
+        <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:id="@+id/tv_xlabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="X："/>
+                    <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/editTextPara01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:ems="10" android:layout_weight="1" android:inputType="numberSigned"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:id="@+id/tv_ylabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Y："/>
+                    <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/editTextPara02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:ems="10" android:layout_weight="1" android:inputType="numberSigned"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="right" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="4">
+                <Button android:textAppearance="?android:attr/textAppearanceMedium" android:gravity="center" android:id="@+id/buttonCheckPtnExchange" android:tag="切换坐标显示" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="" android:drawableLeft="@drawable/refresh"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

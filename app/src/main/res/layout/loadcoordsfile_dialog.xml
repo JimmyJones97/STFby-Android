@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="数据文件"/>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="文件路径:"/>
+            <EditText android:ellipsize="start" android:id="@+id/et_Import_filepath" android:focusable="false" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="" android:ems="10" android:scrollHorizontally="true" android:singleLine="true" android:editable="false" android:layout_weight="1"/>
+            <Button android:id="@+id/btn_Import_file" android:tag="选择文件" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:drawableLeft="@drawable/folder1148" style="@style/Button_Style_Left"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp">
+            <TextView android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="分隔符号:"/>
+            <EditText android:ellipsize="start" android:id="@+id/et_Import_splitChar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="," android:ems="10" android:scrollHorizontally="true" android:singleLine="true" android:layout_weight="1"/>
+            <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_SkipFirst" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="跳过第一行"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="right|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+            <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_IsCoordLngLat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="经纬度坐标"/>
+            <Button android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_PreviewFile" android:tag="预览文件" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_margin="5dp" android:text="预览文件" style="@style/Button_Style_Left"/>
+            <Button android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_Import_LoadFile" android:tag="加载文件" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="加载文件" android:drawableLeft="@drawable/import48" style="@style/Button_Style_Left"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="数据设置"/>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="X坐标所在列："/>
+                <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_column_selectX" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Y坐标所在列："/>
+                <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_column_selectY" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Z坐标所在列："/>
+                <com.xzy.forestSystem.gogisapi.MyControls.SpinnerList android:id="@+id/sp_column_selectZ" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp" android:minHeight="200dp" android:layout_weight="1">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="数据列表"/>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:minHeight="200dp" android:layout_weight="1">
+            <include android:id="@+id/mytable_CoordsImport_datalist" layout="@layout/mytable_listview"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

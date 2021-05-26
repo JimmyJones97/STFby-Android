@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="实验形数设置:"/>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="100dp" android:layout_height="wrap_content" android:text="松木："/>
+            <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/et_xujiparam_01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.39" android:ems="10" android:layout_weight="1" android:inputType="numberDecimal"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="100dp" android:layout_height="wrap_content" android:text="人工杉木："/>
+            <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/et_xujiparam_02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.42" android:ems="10" android:layout_weight="1" android:inputType="numberDecimal"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="100dp" android:layout_height="wrap_content" android:text="天然杉木："/>
+            <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/et_xujiparam_03" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.39" android:ems="10" android:layout_weight="1" android:inputType="numberDecimal"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="100dp" android:layout_height="wrap_content" android:text="阔叶树："/>
+            <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/et_xujiparam_04" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.38" android:ems="10" android:layout_weight="1" android:inputType="numberDecimal"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

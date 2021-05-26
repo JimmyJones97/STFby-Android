@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="10dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="数据文件:"/>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="文件路径:"/>
+            <EditText android:ellipsize="start" android:id="@+id/et_dataauth_filepath" android:focusable="false" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="" android:ems="10" android:scrollHorizontally="true" android:singleLine="true" android:editable="false" android:layout_weight="1"/>
+            <Button android:id="@+id/btn_dataauth_selectFile" android:tag="选择文件" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:drawableLeft="@drawable/data_query" style="@style/Button_Style_Left"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="right|center_vertical|center_horizontal|center" android:id="@+id/ll_dataauth_tools" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_dataauth_SetCode" android:tag="添加设备" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="设置密码" android:drawableLeft="@drawable/lock48"/>
+            <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_dataauth_RemoveCode" android:tag="解除数据加密" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:text="解除加密" android:drawableLeft="@drawable/unlock48"/>
+            <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_dataauth_CodeTypeSet" android:tag="加密类型设置" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="加密类型"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_dataauth_codeType" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="10dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="加密类型:"/>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <RadioGroup android:orientation="horizontal" android:id="@+id/rg_polygonFillType" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <RadioButton android:textColor="@color/dialog_txt_color" android:id="@+id/radio0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20dp" android:checked="true" android:text="密码授权"/>
+                <RadioButton android:textColor="@color/dialog_txt_color" android:id="@+id/radio1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="设备授权"/>
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_dataauth_device" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="10dp" android:layout_weight="1">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="设备列表:"/>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:minHeight="100dp" android:layout_weight="1">
+            <include android:id="@+id/mytable_dataauth_device" layout="@layout/mytable_listview"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_dataauth_addDevice" android:tag="添加设备" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="添 加" android:drawableLeft="@drawable/addfile48"/>
+            <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_dataauth_modifyDevice" android:tag="修改设备" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="修 改" android:drawableLeft="@drawable/edit"/>
+            <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_dataauth_deleteDevice" android:tag="删除设备" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="删 除" android:drawableLeft="@drawable/deleteobject"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

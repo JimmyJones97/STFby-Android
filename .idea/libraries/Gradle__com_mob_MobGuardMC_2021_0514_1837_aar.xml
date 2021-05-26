@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.mob:MobGuardMC:2021.0514.1837@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/79b9d1f5e7c8de55fb0a0d4c05584869/jetified-MobGuardMC-2021.0514.1837/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/79b9d1f5e7c8de55fb0a0d4c05584869/jetified-MobGuardMC-2021.0514.1837/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/79b9d1f5e7c8de55fb0a0d4c05584869/jetified-MobGuardMC-2021.0514.1837/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

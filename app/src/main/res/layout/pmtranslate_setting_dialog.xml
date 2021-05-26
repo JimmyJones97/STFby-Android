@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="top" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="X平移(m)："/>
+            <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/editTextPara01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:ems="10" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal">
+                <requestFocus/>
+            </EditText>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Y平移(m)："/>
+            <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/editTextPara02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:ems="10" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Z平移(m)："/>
+            <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/editTextPara03" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:ems="10" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="right|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <CheckBox android:textColor="@color/dialog_txt_color" android:id="@+id/ck_ConsiderTrans" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="坐标系转换"/>
+            <CheckBox android:textColor="@color/dialog_txt_color" android:id="@+id/ck_checkResultSum" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="校正结果累加"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="right|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/buttonCheckBtn01" android:tag="单点校正" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="单点校正" android:drawableLeft="@drawable/calparam4byonepoint"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

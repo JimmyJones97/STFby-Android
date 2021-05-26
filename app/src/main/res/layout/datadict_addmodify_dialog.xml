@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="10dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="字典条目:"/>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="字典编码:"/>
+            <EditText android:ellipsize="start" android:id="@+id/et_dataDictAdd_Name0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:ems="10" android:scrollHorizontally="true" android:singleLine="true" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="字典名称:"/>
+            <EditText android:ellipsize="start" android:id="@+id/et_dataDictAdd_Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:ems="10" android:scrollHorizontally="true" android:singleLine="true" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="条目大类:"/>
+            <EditText android:ellipsize="start" android:id="@+id/et_dataDictAdd_Name2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:ems="10" android:scrollHorizontally="true" android:singleLine="true" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="条目细类:"/>
+            <EditText android:ellipsize="start" android:id="@+id/et_dataDictAdd_Name3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:ems="10" android:scrollHorizontally="true" android:singleLine="true" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="细类代码:"/>
+            <EditText android:ellipsize="start" android:id="@+id/et_dataDictAdd_Name5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:ems="10" android:scrollHorizontally="true" android:singleLine="true" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="10dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="条目内容:"/>
+            <EditText android:ellipsize="start" android:id="@+id/et_dataDictAdd_Name4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:ems="10" android:scrollHorizontally="true" android:layout_weight="1" android:inputType="textMultiLine"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

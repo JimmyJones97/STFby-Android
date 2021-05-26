@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="horizontal" android:id="@+id/toolbar_polygon_edit" android:background="@drawable/toolbar_shape" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <HorizontalScrollView android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+            <ScrollView android:layout_width="wrap_content" android:layout_height="match_parent">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/ll_toolbar_polygonEdit" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <TextView android:textSize="16sp" android:textColor="@color/dialog_txt_color" android:id="@+id/tv_polygon_edit" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="面编辑:"/>
+                    <Button android:id="@+id/bt_PolyEdit_MoveVertex" android:tag="移点" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="移点" android:drawableTop="@drawable/vertex_move" style="@style/toolbar_Button_Style"/>
+                    <Button android:id="@+id/bt_PolyEdit_AddVertex" android:tag="加点" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="加点" android:drawableTop="@drawable/vertex_add" style="@style/toolbar_Button_Style"/>
+                    <Button android:id="@+id/bt_PolyEdit_DelVertex" android:tag="删点" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="删点" android:drawableTop="@drawable/vertex_del" style="@style/toolbar_Button_Style"/>
+                    <Button android:id="@+id/bt_PolyEdit_SplitLine" android:tag="线割" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="线割" android:drawableTop="@drawable/poly_split" style="@style/toolbar_Button_Style"/>
+                    <Button android:id="@+id/bt_PolyEdit_SplitPoly" android:tag="面割" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="面割" android:drawableTop="@drawable/poly_split_bypoly" style="@style/toolbar_Button_Style"/>
+                    <Button android:id="@+id/bt_PolyEdit_Union" android:tag="合并" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="合并" android:drawableTop="@drawable/poly_merge" style="@style/toolbar_Button_Style"/>
+                    <Button android:id="@+id/bt_PolyEdit_Exit" android:tag="关闭工具" android:background="@drawable/toolbar_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="1dp" android:text="关闭" android:drawableTop="@drawable/close0148" style="@style/toolbar_Button_Style"/>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

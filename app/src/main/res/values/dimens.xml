@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="MyButtonMargin">10dp</dimen>
+    <dimen name="map_tool_button_size">45dp</dimen>
+    <dimen name="map_tool_button_bottom_margin">50dp</dimen>
+    <dimen name="map_tool_button_right_margin">3dp</dimen>
+    <dimen name="map_menu2_textsize">5sp</dimen>
+    <dimen name="headbar_text_marginLeft">5dp</dimen>
+</resources>

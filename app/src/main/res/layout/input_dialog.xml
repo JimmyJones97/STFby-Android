@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:id="@+id/tv_paraName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/headbar_text_marginLeft" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:text="大小: "/>
+        <AutoCompleteTextView android:id="@+id/ed_inputpara" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:ems="10" android:layout_weight="1">
+            <requestFocus/>
+        </AutoCompleteTextView>
+    </LinearLayout>
+    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="#ffff0000" android:id="@+id/tv_tipInfo" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="15dp" android:text="提示"/>
+</LinearLayout>

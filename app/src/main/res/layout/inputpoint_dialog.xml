@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="坐标信息:"/>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:id="@+id/tv_xlabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="X："/>
+            <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/editTextPara01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:ems="10" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:id="@+id/tv_ylabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Y："/>
+            <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/editTextPara02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:ems="10" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@+id/ll_zLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/myBlackColor" android:id="@+id/tv_zlabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Z："/>
+            <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/editTextPara03" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:ems="10" android:layout_weight="1" android:inputType="number|numberSigned|numberDecimal"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/ll_Tools_Bottom" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:gravity="center" android:id="@+id/btn_GetFromMeasure" android:tag="从测量获取" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="从测量获取" android:drawableLeft="@drawable/line4148"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xzy="http://schemas.android.com/apk/res/com.xzy.forestSystem" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/buttonLayerNew" android:tag="新建图层" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="新建图层" android:drawableLeft="@drawable/layernew" android:layout_weight="1"/>
+        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/buttonLoadLayer" android:tag="导入图层" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="导入图层" android:drawableLeft="@drawable/layer_shp" android:layout_weight="1"/>
+        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/buttonMoreTools" android:tag="更多工具" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="..." android:layout_weight="1"/>
+    </LinearLayout>
+    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="match_parent">
+            <ListView android:id="@+id/lv_featureLayers" android:scrollbars="horizontal|vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:scrollingCache="false" android:cacheColorHint="#00000000" android:divider="#00000000" android:dividerHeight="0dp" android:layout_weight="1" android:headerDividersEnabled="false" android:footerDividersEnabled="false"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

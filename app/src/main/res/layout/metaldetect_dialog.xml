@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="磁场信息:"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:textSize="50sp" android:textColor="@color/myRedColor" android:gravity="right|center_vertical|center_horizontal|center" android:layout_gravity="center" android:id="@+id/tv_magValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="100" android:layout_weight="1"/>
+            <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:textColor="@color/myDarkBlueColor" android:gravity="bottom|left|center_vertical|center_horizontal|center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="μT" android:layout_weight="0.4"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="5dp" android:layout_weight="0.2">
+                <TextView android:textSize="20sp" android:textColor="@color/myDarkVolColor" android:layout_gravity="left|center_vertical|center_horizontal|center" android:id="@+id/tv_magValueX" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:text="X=-50.0"/>
+                <TextView android:textSize="20sp" android:textColor="@color/myDarkVolColor" android:layout_gravity="left|center_vertical|center_horizontal|center" android:id="@+id/tv_magValueY" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:text="Y=0.0"/>
+                <TextView android:textSize="20sp" android:textColor="@color/myDarkVolColor" android:layout_gravity="left|center_vertical|center_horizontal|center" android:id="@+id/tv_magValueZ" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:text="Z=0.0"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="过程线:"/>
+        <lecho.lib.hellocharts.view.LineChartView android:id="@+id/chart" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp"/>
+    </LinearLayout>
+</LinearLayout>

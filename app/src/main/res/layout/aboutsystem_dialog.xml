@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:autoLink="web|email|phone" android:id="@+id/tv_systemInfo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="" android:layout_weight="1" android:lineSpacingExtra="5dp"/>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:id="@+id/tv_authourType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="授权类型：未注册" android:layout_weight="1" android:lineSpacingExtra="5dp"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="5dp">
+        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:id="@+id/bt_register" android:tag="注册" android:background="@drawable/dialog_btn_selector" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="注册" android:drawableLeft="@drawable/check2048" android:layout_weight="1"/>
+        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:layout_gravity="center" android:id="@+id/bt_aboutSystem_DeviceInfo" android:tag="联系我们" android:background="@drawable/dialog_btn_selector" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="联系我们" android:drawableLeft="@drawable/cloudme" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

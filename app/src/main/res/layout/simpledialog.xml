@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <ImageView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:src="@drawable/messageinfo"/>
+        <TextView android:textSize="20sp" android:textColor="@color/myBlackColor" android:gravity="center" android:id="@+id/tv_simpleDialog_title" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="提示"/>
+    </LinearLayout>
+    <View android:layout_gravity="center" android:background="#f03ab94a" android:layout_width="match_parent" android:layout_height="2dp" android:layout_margin="5dp"/>
+    <LinearLayout android:id="@+id/ll_simpleDialog_msg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:layout_weight="1">
+        <TextView android:scrollbarStyle="outsideOverlay" android:textSize="20sp" android:textColor="@color/myBlackColor" android:id="@+id/tv_simpleDialog_msg" android:visibility="visible" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="10dp" android:text="提示" android:maxLines="15" android:singleLine="false" android:scrollbarFadeDuration="1000"/>
+    </LinearLayout>
+    <View android:layout_gravity="center" android:background="#f03ab94a" android:layout_width="match_parent" android:layout_height="2dp" android:layout_margin="5dp"/>
+    <LinearLayout android:gravity="center" android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="5dp">
+        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:gravity="center" android:id="@+id/btn_simpleDialog_Posi" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="确定" android:layout_weight="1"/>
+        <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:gravity="center" android:id="@+id/btn_simpleDialog_Nagv" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="取消" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_messageDialogSetting" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="窗体宽度："/>
+            <EditText android:id="@+id/et_dialogWidth" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="400" android:ems="10" android:layout_weight="1" android:inputType="numberSigned">
+                <requestFocus/>
+            </EditText>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="窗体高度："/>
+            <EditText android:id="@+id/et_dialogHeight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="300" android:ems="10" android:layout_weight="1" android:inputType="numberSigned">
+                <requestFocus/>
+            </EditText>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="最多显示行数："/>
+            <EditText android:id="@+id/et_dialogMaxCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5" android:ems="10" android:layout_weight="1" android:inputType="numberSigned">
+                <requestFocus/>
+            </EditText>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_childMapSetting" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="窗体宽度："/>
+            <EditText android:id="@+id/et_childMapWidth" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="400" android:ems="10" android:layout_weight="1" android:inputType="numberSigned">
+                <requestFocus/>
+            </EditText>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="窗体高度："/>
+            <EditText android:id="@+id/et_childMapHeight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="300" android:ems="10" android:layout_weight="1" android:inputType="numberSigned">
+                <requestFocus/>
+            </EditText>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@+id/ll_FormTranspSetting" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="窗体透明度："/>
+            <EditText android:id="@+id/et_FormTransparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="125" android:ems="10" android:layout_weight="1" android:inputType="numberSigned">
+                <requestFocus/>
+            </EditText>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

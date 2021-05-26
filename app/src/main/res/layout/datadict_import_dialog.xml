@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/dialog_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="10dp">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="数据文件:"/>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="文件路径:"/>
+            <EditText android:ellipsize="start" android:id="@+id/et_dataDictImport_filepath" android:focusable="false" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="" android:ems="10" android:scrollHorizontally="true" android:singleLine="true" android:editable="false" android:layout_weight="1"/>
+            <Button android:id="@+id/btn_dataDictImport_file" android:tag="选择文件" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:drawableLeft="@drawable/data_query" style="@style/Button_Style_Left"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@+id/ll_dataDictImport_splitChar" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_txt_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="分隔符号:"/>
+            <EditText android:ellipsize="start" android:id="@+id/et_dataDictImport_splitChar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:ems="10" android:scrollHorizontally="true" android:singleLine="true" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="right|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="10dp">
+            <CheckBox android:textColor="@color/myBlackColor" android:id="@+id/ck_SkipFirst" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:checked="true" android:text="跳过第一行"/>
+            <Button android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_dataDictImport_LoadFile" android:tag="加载文件" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="加载文件" android:drawableLeft="@drawable/import48" style="@style/Button_Style_Left"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_dataDictImport_datalist" android:background="@drawable/dialog_headbar_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="10dp" android:layout_weight="1">
+        <TextView android:textColor="@color/dialog_txt_color" android:background="@drawable/dialog_headtext_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="字典数据列表:"/>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:minHeight="100dp" android:layout_weight="1">
+            <include android:id="@+id/mytable_dataDictImport_datalist" layout="@layout/mytable_listview"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_dataDictImport_add" android:tag="添加" android:background="@drawable/dialog_btn_selector" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="添 加" android:drawableLeft="@drawable/addfile48"/>
+            <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_dataDictImport_modify" android:tag="修改" android:background="@drawable/dialog_btn_selector" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="修 改" android:drawableLeft="@drawable/edit"/>
+            <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/dialog_button_txt_color" android:id="@+id/btn_dataDictImport_delete" android:tag="删除" android:background="@drawable/dialog_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="删 除" android:drawableLeft="@drawable/deleteobject"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

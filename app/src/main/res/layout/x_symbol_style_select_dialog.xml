@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textColor="@color/dialog_txt_color" android:background="@layout/x_bk_head_splitbar" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="基础符号样式："/>
+    <LinearLayout android:orientation="vertical" android:background="@color/myWhiteColor" android:layout_width="match_parent" android:layout_height="match_parent">
+        <include android:id="@+id/symbolstyles_list" layout="@layout/mytable_listview"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/loadingdialog_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:minWidth="300dp" android:minHeight="160dp">
+    <RelativeLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <ImageView android:padding="3dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/app72" android:layout_centerHorizontal="true" android:layout_centerVertical="true"/>
+        <ImageView android:id="@+id/iv_route" android:background="@drawable/dialog_loading_anim_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_margin="5dp">
+        <TextView android:textSize="20sp" android:textColor="@color/myWhiteColor" android:ellipsize="marquee" android:gravity="center" android:id="@+id/tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="正在加载" android:singleLine="false"/>
+        <TextView android:textSize="20sp" android:textColor="@color/myWhiteColor" android:id="@+id/tv_point" android:layout_width="20dp" android:layout_height="wrap_content" android:text="..."/>
+    </LinearLayout>
+</LinearLayout>

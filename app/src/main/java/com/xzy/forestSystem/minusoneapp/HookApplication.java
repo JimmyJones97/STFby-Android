@@ -8,6 +8,10 @@ import android.text.TextUtils;
 import android.util.ArrayMap;
 import android.util.Log;
 
+import com.xzy.forestSystem.PubVar;
+import com.xzy.forestSystem.gogisapi.Carto.Map;
+import com.xzy.forestSystem.gogisapi.Common.PubCommand;
+
 import java.io.File;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -22,6 +26,7 @@ public class HookApplication extends Application {
     public static String originalSignature = "HYkeO2Pcy0SSE3ZGc9ttwFw3t23hJxwSxjRhmQ0YCt5XwIkb0VY85sFZtiTcFEjXDVDuYABMf8SB81Fpvu53CBJmMTv0T4P8dCA/G/v6AUn7L6iQ1TkDj1H34p/dkCmYzptmnNxSS15xUmqm56TNyfROYR3XW5ZeWMbC0YYb28K8uJN6/ludR8TAydwFMHPUYi7JUeKBaxeiHec57UjDWVtrk/AfHhSfbFybF9lINkBzeiED/DpTyKTsjJBuD8qkSUaHudglH5TG7lR8Q75omjBN9DFOJK/nk41I44Q84pYdFHVH97GdGHXkn7aUumk2n/0c9dpB9/BbbrGmdAhrnsUpH5e4f2SV314cEfavZlDPigKNL7sG6DhtQREQF7emTsYozh6C2mCFAG2M+eGF0wbebxZ8gfupdTxGbIAaKOd/SA8SsPpCNDdyD1JMl+JibMDgqNZ+NqHxPzJwynA7XX6b7tDMC1o7SpFHr3ySyGQtO7hNvBJEyqeOGGendHamDYqgXFUsSLWSCtlGkjyMPC901XKN+DgulPoPBwJGl78Jdctk8qdlWlFxVD5qUz+bwFxQd44QcIWflmszfe0JOyrrv6smDueb1afeptuywEhAzNchHVYqFgCe+cmPcrdTu1OV7zGivvjKZSgfJuv6eVH74XA9f/moJZhkaCbqCRCFauddPv+CQ00pNptjuwL4mSPGrQzsyKN4qX/i8fn5w1EqIIWRiAzjKrJVBVStcaU9ra0DEz/TlrlYlL5xWbmG9fLprj7U11835jmwhQKKDaq9+Y6+BMW+EI9eR5u80NeObeRowqCLtEJ4HGE1qD/zstGAvgyuW5ysDKU5Rd8gcChwYcdx+bLVt5V++CoI0PNK/yEYD6VfTOSmWokeu1yce2rCwE40eojCOIOizvnQ/b0tMA6wabUd2eA1o3YerRAhcRGRsGziYzvOQTzTp8tIs4vM3SK4m9jvgFdgOTS5wPGkhiXKph/cWbvX2lBsCCQtGXT2VMAp4y1e6bhuUhtode2wWs0c2bWVHbEzT6VMJUKO1dr6PurTrH03bwRyfmSesTH/mvB+kSAp4Gyahcu451vLe4y7j1heJwG05MLsRM9/r5U0Vde1OV1HCTQXZKYMTSRZ+sJO1IYHhiI305SyVPyZHwyBGldFjzQ9a1vqjpyM00RVny+Hc3bHVRo4zfrNxKuvaL4fGbI1DDC7GyYO+P34h2ZShNWtJyzZX07gnHafdeVIYIPOpPAYKpxNht1tUOeHdI1rU+WZupuoM41x59DDEDcHzTPI5Vqfgn3mw3sgAaFi9AEtQfnMvnGQrwcf/CMcooMZuRj9YTBZ1R2NToykwFide3ExtZE+MYop8HUabD43rfPu5AQIFGEfJGgIBOpaWaujaKUdjehgVT4FiyE7wJSx+03sHt8psMFH+L2KRzB7SqCfFUtkSd/IZc88gK1hUzERwBYSAWj26/U3bZXLd/ZFGGUhb2+Z+knxPKPcbMln0u4WcEe1589aZUWu4bDgAxtO93JdDyoZzb3bAYIsEH7d64ZFd1elIJN9bw==";
     private Application originalApplication;
     private String original_application_name = "J5Lc584BLgs2tK9uNud2IzbA+w9aX44ZUP7TJ8peYSA=";
+    PubCommand m_PubCommand;
 
     static {
         try {
@@ -117,13 +122,23 @@ public class HookApplication extends Application {
 
     @Override
     public void onCreate() {
-        super.onCreate();
+        this.originalApplication = this;
         try {
+            PubVar.MainContext = this;
             replaceApplication(this);
-            loadSoAndDexFromAssetPathCopy(this);
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
+            Context createAppContext = createAppContext();
+            loadSoAndDexFromAssetPathCopy(createAppContext);
+            HookSignature(createAppContext);
+            Boolean bool = true;
+            if (bool.booleanValue()) {
+                redirectApk(createAppContext);
+            }
+        } catch (Throwable th) {
+            th.printStackTrace();
+            Log.i("HookFailed", "Error", th);
         }
+        super.onCreate();
+
     }
 
     public void replaceApplication(Application application) throws Throwable {

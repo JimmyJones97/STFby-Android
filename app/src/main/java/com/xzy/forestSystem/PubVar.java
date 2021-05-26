@@ -84,7 +84,7 @@ public class PubVar {
     public static int ScreenStatusHeight = 0;
     public static int ScreenWidth;
     public static float ScreenXDPI = 3.0f;
-    public static String ServerURL = "http://www.milliontechnology.com/GZForestServer/";
+    public static String ServerURL = ""/*http://www.milliontechnology.com/GZForestServer/*/;
     public static boolean ShowToolbarAnim = true;
     public static double SnapDistance = 20.0d;
     public static CopyPasteObject SystemCopyObject = null;

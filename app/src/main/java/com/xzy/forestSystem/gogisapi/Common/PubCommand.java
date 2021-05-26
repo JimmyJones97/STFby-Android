@@ -229,30 +229,30 @@ public class PubCommand {
             }
         };
         this.m_mapView = PubVar._MapView;
-        this.m_mapView._Select.SetCallback(this._Callback);
-        this.m_GPSDisplay = new GPSDisplay(PubVar._MapView);
+//        this.m_mapView._Select.SetCallback(this._Callback);
+//        this.m_GPSDisplay = new GPSDisplay(PubVar._MapView);
         PubVar._GPSDisplay = this.m_GPSDisplay;
         this.m_Context = context;
         PubVar._PubCommand = this;
         this.m_Measure = new MeasureTool();
         this.m_ScaleBar = new ScaleBar();
-        this.m_TrackLine = new TrackLine();
+//        this.m_TrackLine = new TrackLine();
         this.m_Toolbars = new ArrayList();
         this.m_ToolbarNames = new ArrayList();
         this.m_ConfigDB = new SysConfig();
-        this.m_UserConfigDB = new UserConfig();
-        this.m_UserConfigDB.LoadSystemConfig();
-        this.m_ProjectDB = new ProjectDatabase();
+//        this.m_UserConfigDB = new UserConfig();
+//        this.m_UserConfigDB.LoadSystemConfig();
+//        this.m_ProjectDB = new ProjectDatabase();
         this.m_Delete = new DeleteObject();
         this.m_Compass = new CompassClass(this.m_Context);
-        this.m_GpsLocation = new GPSLocationClass(this.m_Context);
+//        this.m_GpsLocation = new GPSLocationClass(this.m_Context);
     }
 
     public void SetOpenProjectMode(int mode) {
         this.m_OpenProjectMode = mode;
     }
 
-    private void IntialMap() {
+    public void IntialMap() {
         if (PubVar.m_Workspace != null) {
             PubVar.m_Workspace.ClearWorkspace();
             PubVar.m_Workspace = null;

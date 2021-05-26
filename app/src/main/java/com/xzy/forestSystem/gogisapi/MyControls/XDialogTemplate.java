@@ -111,7 +111,7 @@ public class XDialogTemplate extends Dialog {
 
     public void Resize(float widthRatio, float heightRatio) {
         WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
-        Display localDisplay = ((Activity) PubVar._PubCommand.m_Context).getWindowManager().getDefaultDisplay();
+        Display localDisplay = ((Activity) PubVar.MainContext).getWindowManager().getDefaultDisplay();
         localLayoutParams.x = 0;
         localLayoutParams.y = 0;
         if (PubVar.m_SCREEN_ORIENTATION == 0) {

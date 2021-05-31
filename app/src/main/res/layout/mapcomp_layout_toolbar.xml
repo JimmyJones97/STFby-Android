@@ -37,7 +37,8 @@
             android:layout_alignParentRight="true"
             android:layout_margin="5dp"
             android:background="@drawable/mb_button_selector"
-            android:src="@drawable/mb_edit" />
+            android:src="@drawable/mb_edit"
+          />
 
         <ImageButton
             android:id="@+id/imageButtonSwitchLayers"
@@ -78,8 +79,7 @@
             android:layout_alignParentBottom="true"
             android:layout_margin="5dp"
             android:background="@drawable/mb_button_selector"
-            android:src="@drawable/mb_menu"
-             />
+            android:src="@drawable/mb_menu" />
 
         <LinearLayout
             android:id="@+id/LinearLayoutTopTitle"
@@ -207,16 +207,16 @@
         android:id="@+id/ll_replaceMainMenu"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:visibility="gone"
-        android:orientation="horizontal" />
+        android:orientation="horizontal"
+        android:visibility="gone" />
 
     <LinearLayout
         android:id="@+id/ll_toolbarGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="bottom"
-        android:visibility="gone"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="gone">
 
         <include
             android:id="@+id/mainbottomtoolbar"

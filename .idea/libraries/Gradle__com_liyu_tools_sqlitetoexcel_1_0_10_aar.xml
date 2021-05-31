@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.liyu.tools:sqlitetoexcel:1.0.10@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/36a1feb9f3b978cab7e878ebc2e8524f/jetified-sqlitetoexcel-1.0.10/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/36a1feb9f3b978cab7e878ebc2e8524f/jetified-sqlitetoexcel-1.0.10/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/36a1feb9f3b978cab7e878ebc2e8524f/jetified-sqlitetoexcel-1.0.10/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.liyu.tools/sqlitetoexcel/1.0.10/156dfd6bbf9566dfaa1a160026a8b3a530284e6b/sqlitetoexcel-1.0.10-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.liyu.tools/sqlitetoexcel/1.0.10/878109466a6bc69db7241c956353652ad6afab7f/sqlitetoexcel-1.0.10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

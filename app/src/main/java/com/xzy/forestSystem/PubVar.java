@@ -5,20 +5,21 @@ import android.content.Context;
 import android.graphics.Paint;
 import android.util.DisplayMetrics;
 import android.view.WindowManager;
-import  com.xzy.forestSystem.gogisapi.Carto.Map;
-import  com.xzy.forestSystem.gogisapi.Carto.MapView;
+
+import com.xzy.forestSystem.gogisapi.Carto.Map;
+import com.xzy.forestSystem.gogisapi.Carto.MapView;
 import com.xzy.forestSystem.gogisapi.Common.Common;
-import  com.xzy.forestSystem.gogisapi.Common.CopyPasteObject;
-import  com.xzy.forestSystem.gogisapi.Common.HashValueObject;
-import  com.xzy.forestSystem.gogisapi.Common.ICallback;
-import  com.xzy.forestSystem.gogisapi.Common.NetWorkUtils;
-import  com.xzy.forestSystem.gogisapi.Common.PubCommand;
-import  com.xzy.forestSystem.gogisapi.Common.XHashMap;
-import  com.xzy.forestSystem.gogisapi.GPS.GPSDisplay;
-import  com.xzy.forestSystem.gogisapi.Geodatabase.C0542Workspace;
-import  com.xzy.forestSystem.gogisapi.MyControls.MessagePanel_Dialog;
-import  com.xzy.forestSystem.gogisapi.System.AuthorizeTools;
-import  com.xzy.forestSystem.gogisapi.Toolbar.LayersContent_Dialog;
+import com.xzy.forestSystem.gogisapi.Common.CopyPasteObject;
+import com.xzy.forestSystem.gogisapi.Common.HashValueObject;
+import com.xzy.forestSystem.gogisapi.Common.ICallback;
+import com.xzy.forestSystem.gogisapi.Common.NetWorkUtils;
+import com.xzy.forestSystem.gogisapi.Common.PubCommand;
+import com.xzy.forestSystem.gogisapi.Common.XHashMap;
+import com.xzy.forestSystem.gogisapi.GPS.GPSDisplay;
+import com.xzy.forestSystem.gogisapi.Geodatabase.C0542Workspace;
+import com.xzy.forestSystem.gogisapi.MyControls.MessagePanel_Dialog;
+import com.xzy.forestSystem.gogisapi.System.AuthorizeTools;
+import com.xzy.forestSystem.gogisapi.Toolbar.LayersContent_Dialog;
 import com.xzy.forestSystem.hellocharts.animation.ChartViewportAnimator;
 import com.xzy.forestSystem.hellocharts.animation.PieChartRotationAnimator;
 
@@ -26,7 +27,7 @@ import java.util.Date;
 
 public class PubVar {
     public static boolean AllowEditSnap = true;
-    public static String AppName = "晟泰采集系统";
+    public static String AppName = "采集系统";
     public static String AppNameEN = "GZForestSystem";
     public static int AreaUnitType = 1;
     public static boolean AutoPan = true;
@@ -131,6 +132,7 @@ public class PubVar {
     public static void Initial(Context context) {
         m_SystemPath = Common.GetAPPPath();
         Common.InitialAPP(context);
+        _PubCommand = new PubCommand(context);
         HashValueObject localHashValueObject = new HashValueObject();
         localHashValueObject.Value = "采集数据";
         _ComHashMap.AddValue("ModuleName", localHashValueObject);

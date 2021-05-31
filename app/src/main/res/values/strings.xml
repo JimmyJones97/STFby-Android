@@ -135,8 +135,8 @@
     <string name="smssdk_error_detail_609">Request header错误：Sign为空</string>
     <string name="smssdk_error_detail_610">Request header错误：UserAgent为空</string>
     <string name="smssdk_error_detail_611">AppSecret为空</string>
-    <string name="app_name">晟泰采集系统</string>
-    <string name="hello_world">欢迎使用晟泰采集系统!</string>
+    <string name="app_name">采集系统</string>
+    <string name="hello_world">欢迎使用采集系统!</string>
     <string name="action_settings">设置</string>
     <string name="ptr_pull_to_refresh">下拉更新</string>
     <string name="ptr_release_to_refresh">释放开始更新</string>

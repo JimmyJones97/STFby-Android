@@ -64,7 +64,7 @@ public class About_Dialog {
         StringBuilder tempSB = new StringBuilder();
         tempSB.append("版本号: ");
         tempSB.append(PubVar.Version);
-        tempSB.append("\r\n贵州晟泰工程咨询有限公司");
+        tempSB.append("\r\n公司");
         tempSB.append("\r\n目    录: " + PubVar.m_SystemPath);
         tempSB.append("\r\n型    号: ");
         tempSB.append(Build.MANUFACTURER);

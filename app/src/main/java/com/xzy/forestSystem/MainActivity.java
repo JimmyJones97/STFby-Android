@@ -18,6 +18,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.Process;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -278,200 +279,9 @@ public class MainActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        m_MapView = new MapView(this);
-        map = new Map(m_MapView);
-        PubVar pubVar = new PubVar();
-        pubVar.MainContext = this;
-        this._ReplaceMainMenuLL = (LinearLayout) findViewById(R.id.ll_replaceMainMenu);
-        ImageView localImageView = (ImageView) findViewById(R.id.x_scalebar);
-//        PubVar._PubCommand.m_ScaleBar.SetImageView(localImageView);
-        localImageView.setOnClickListener(new View.OnClickListener() { // from class:  com.xzy.forestSystem.gogisapi.Toolbar.MapCompLayoutToolbar.3
-            @Override // android.view.View.OnClickListener
-            public void onClick(View arg0) {
-                PubVar._PubCommand.ProcessCommand("地图比例尺显示设置");
-            }
-        });
-        this.gpsTextView = (TextView) findViewById(R.id.textView_gps);
-        TextView gpsStatusInfoText = (TextView) findViewById(R.id.textViewTitleTip);
-        ImageView gpsOnOffImgView = (ImageView) findViewById(R.id.imageViewGPSOFF);
-        ImageView gpsSNRImgView = (ImageView) findViewById(R.id.imageViewGPSSNR);
-        this.gpsTextView.setOnClickListener(new View.OnClickListener() { // from class:  com.xzy.forestSystem.gogisapi.Toolbar.MapCompLayoutToolbar.4
-            @Override // android.view.View.OnClickListener
-            public void onClick(View arg0) {
-                HeadGPSCoordShowType_Dialog tempDialog = new HeadGPSCoordShowType_Dialog();
-                tempDialog.SetCallback(pCallback);
-                tempDialog.ShowDialog();
-            }
-        });
-        gpsStatusInfoText.setOnClickListener(this.myGPSTipClickListener);
-        gpsOnOffImgView.setOnClickListener(this.myGPSTipClickListener);
-        gpsSNRImgView.setOnClickListener(this.myGPSTipClickListener);
-//        if (PubVar._PubCommand.m_GpsLocation != null) {
-//            PubVar._PubCommand.m_GpsLocation.setControls(this.gpsTextView, gpsStatusInfoText, gpsOnOffImgView, gpsSNRImgView);
-//            PubVar._PubCommand.m_GpsLocation.updateShowTextInfo(this.gpsTextView);
-//        }
-        ((ImageButton) findViewById(R.id.imageButtonGPS)).setOnClickListener(new View.OnClickListener() { // from class:  com.xzy.forestSystem.gogisapi.Toolbar.MapCompLayoutToolbar.5
-            @Override // android.view.View.OnClickListener
-            public void onClick(View arg0) {
-                PubVar._PubCommand.ProcessCommand("开启GPS设备");
-            }
-        });
-        ((ImageButton) findViewById(R.id.imageButtonLayers)).setOnClickListener(new View.OnClickListener() { // from class:  com.xzy.forestSystem.gogisapi.Toolbar.MapCompLayoutToolbar.6
-            @Override // android.view.View.OnClickListener
-            public void onClick(View arg0) {
-                FeatureLayersList_Dialog tmpDialog = new FeatureLayersList_Dialog();
-                if (m_SelectLayer != null) {
-                    tmpDialog.setCurrentEditLyrID(m_SelectLayer.getLayerID());
-                }
-                tmpDialog.SetCallback(pCallback);
-                tmpDialog.ShowDialog();
-            }
-        });
-        this.compassImageView = (ImageButton) findViewById(R.id.imageButtonCompass);
-        this.compassImageView.setOnClickListener(new View.OnClickListener() { // from class:  com.xzy.forestSystem.gogisapi.Toolbar.MapCompLayoutToolbar.7
-            @Override // android.view.View.OnClickListener
-            public void onClick(View arg0) {
-                m_compassImageViewCount++;
-                if (m_compassImageViewCount > 5) {
-                    PubVar.RasterLayerShowRect = true;
-                }
-                if (m_compassImageViewCount > 10) {
-                    PubVar.RasterLayerShowRect = false;
-                    m_compassImageViewCount = 0;
-                }
-            }
-        });
-//        if (PubVar._PubCommand.m_Compass != null) {
-//            PubVar._PubCommand.m_Compass.setCompassImageView(this.compassImageView);
-//        }
-        if (PubVar.Compass_Show) {
-            this.compassImageView.setVisibility(0);
-        } else {
-            this.compassImageView.setVisibility(8);
-        }
-        ((ImageButton) findViewById(R.id.imageButtonSwitchLayers)).setOnClickListener(new View.OnClickListener() { // from class:  com.xzy.forestSystem.gogisapi.Toolbar.MapCompLayoutToolbar.8
-            @Override // android.view.View.OnClickListener
-            public void onClick(View arg0) {
-                new SwitchGroupLayer_Dailog().ShowDialog();
-            }
-        });
-        ((ImageButton) findViewById(R.id.imageButtonLayersContent)).setOnClickListener(new View.OnClickListener() { // from class:  com.xzy.forestSystem.gogisapi.Toolbar.MapCompLayoutToolbar.9
-            @Override // android.view.View.OnClickListener
-            public void onClick(View arg0) {
-                if (PubVar.MyLayersContent == null) {
-                    LayersContent_Dialog tmpLayersContent_Dialog = new LayersContent_Dialog(PubVar.MainContext, PubVar._PubCommand.m_MainLayout);
-                    PubVar.MyLayersContent = tmpLayersContent_Dialog;
-                    tmpLayersContent_Dialog.showDialog();
-                }
-            }
-        });
-        this._MainMenuImageButton = (ImageButton) findViewById(R.id.imageButtonMainMenu);
-        this._MainMenuImageButton.setOnClickListener(new View.OnClickListener() { // from class:  com.xzy.forestSystem.gogisapi.Toolbar.MapCompLayoutToolbar.10
-            @Override // android.view.View.OnClickListener
-            public void onClick(View arg0) {
-                MainMenuDialog.ShowMenu(MainActivity.this, _MainMenuImageButton.getX(), _MainMenuImageButton.getY());
-            }
-        });
-        this._MBExpandMoreTools = (CircleMenuComposer) findViewById(R.id.cmc_expandMore);
-        this._MBExpandMoreTools.init(new int[]{R.drawable.mb_pan, R.drawable.mb_filter48, R.drawable.mb_info, R.drawable.mb_select, R.drawable.mb_attrib, R.drawable.mb_query}, new String[]{"自由缩放", "选择图层筛选", "单击选择", "选择", "查看属性", "缩放至图层窗体"}, R.drawable.mb_more, R.drawable.mb_more, CircleMenuComposer.RIGHTCENTER, (int) (65.0f * PubVar.ScaledDensity), ChartViewportAnimator.FAST_ANIMATION_DURATION, 100, R.drawable.mb_button_selector);
-        this._MBExpandMoreTools.SetClickItemCollapse(false);
-        this._MBExpandMoreTools.setButtonsOnClickListener(new View.OnClickListener() { // from class:  com.xzy.forestSystem.gogisapi.Toolbar.MapCompLayoutToolbar.11
-            @SuppressLint("ResourceType")
-            @Override // android.view.View.OnClickListener
-            public void onClick(View v) {
-                if (v.getId() == 100) {
-                    PubVar._PubCommand.ProcessCommand("自由缩放");
-                    Common.ShowToast("自由缩放地图");
-                } else if (v.getId() == 101) {
-                    Layer_Select_Dialog tempDialog = new Layer_Select_Dialog();
-                    List tmpList = new ArrayList();
-                    tmpList.addAll(PubVar._Map.getGeoLayers().getList());
-                    tmpList.addAll(PubVar._Map.getVectorGeoLayers().getList());
-                    tempDialog.SetLayersList(tmpList);
-                    tempDialog.SetLayerSelectType(5);
-                    tempDialog.SetSelectedLayers(PubVar._MapView._Select.getSelectLayers());
-                    tempDialog.SetAllowMultiSelect(true);
-                    tempDialog.SetCallback(pCallback);
-                    tempDialog.ShowDialog();
-                } else if (v.getId() == 102) {
-                    PubVar._PubCommand.ProcessCommand("单击选择");
-                    PubVar._PubCommand.JustUpdateToolbarBtnIsSelected("地图缩放工具栏", "单击选择", "图层工具栏");
-                    Common.ShowToast("点击查询");
-                } else if (v.getId() == 103) {
-                    PubVar._MapView._Select.ClearAllSelection();
-                    PubVar._MapView._GraphicLayer.Clear();
-                    PubVar._MapView.invalidate();
-                    PubVar._PubCommand.ProcessCommand("选择");
-                    PubVar._PubCommand.JustUpdateToolbarBtnIsSelected("地图缩放工具栏", "选择", "图层工具栏");
-                    PubVar._MapView._Select.SetMultiSeletected(true);
-                    Common.ShowToast("选择对象");
-                } else if (v.getId() == 104) {
-                    PubVar._PubCommand.ProcessCommand("属性");
-                } else if (v.getId() == 105) {
-                    PubVar._PubCommand.ProcessCommand("缩放至图层窗体");
-                }
-            }
-        });
-        this.m_GPSLocalImgButton = (ImageButton) findViewById(R.id.imageButtonGPSLoc);
-        this.m_GPSLocalImgButton.setOnClickListener(new View.OnClickListener() { // from class:  com.xzy.forestSystem.gogisapi.Toolbar.MapCompLayoutToolbar.12
-            @Override // android.view.View.OnClickListener
-            public void onClick(View v) {
-                if (v.getTag() == null) {
-                    return;
-                }
-                if (!PubVar._PubCommand.m_GpsLocation.isOpen) {
-                    PubVar._PubCommand.ProcessCommand("开启GPS设备");
-                    return;
-                }
-                String command = String.valueOf(v.getTag());
-                if (command.equals("解锁GPS")) {
-                    m_GPSLocalImgButton.setImageResource(R.drawable.mb_gpslock);
-                    v.setTag("锁定GPS");
-                    PubVar.AutoPan = false;
-                    Common.ShowToast("GPS跟踪解锁");
-                } else if (command.equals("锁定GPS")) {
-                    m_GPSLocalImgButton.setImageResource(R.drawable.mb_gpsarrow);
-                    v.setTag("解锁GPS");
-                    PubVar.AutoPan = true;
-                    if (!PubVar._PubCommand.m_GpsLocation.isOpen) {
-                        PubVar._PubCommand.ProcessCommand("开启GPS设备");
-                    } else if (PubVar._PubCommand.m_GpsLocation.IsLocation()) {
-                        Common.ShowToast("当前GPS设备还没有定位,请在开阔地带等待卫星信号.");
-                    } else {
-                        Common.ShowToast("锁定GPS跟踪");
-                    }
-                }
-            }
-        });
-        ImageButton tmpIbtn01 = (ImageButton) findViewById(R.id.imageButtonZoomByExtend);
-        this._MBExpandMoreTools.addButtonTag("框选缩放", R.id.imageButtonZoomByExtend, tmpIbtn01);
-        tmpIbtn01.setOnClickListener(new View.OnClickListener() { // from class:  com.xzy.forestSystem.gogisapi.Toolbar.MapCompLayoutToolbar.13
-            @Override // android.view.View.OnClickListener
-            public void onClick(View view2) {
-                PubVar._PubCommand.ProcessCommand("框选缩放");
-            }
-        });
-        this.m_CommonEventButton = (ImageButton) findViewById(R.id.imageButton_Common);
-        this.m_CommonEventButton.setVisibility(8);
-        this.m_CommonEventButton.setOnClickListener(new View.OnClickListener() { // from class:  com.xzy.forestSystem.gogisapi.Toolbar.MapCompLayoutToolbar.14
-            @Override // android.view.View.OnClickListener
-            public void onClick(View arg0) {
-                if (PubVar._PubCommand.getCommonEvent() != null) {
-                    CommonEvent tmpCommonEvent = PubVar._PubCommand.getCommonEvent();
-                    if (tmpCommonEvent.Dialog != null) {
-                        tmpCommonEvent.Dialog.show();
-                        PubVar._PubCommand.SetCommonEvent(null);
-                        m_CommonEventButton.setVisibility(8);
-                    }
-                }
-            }
-        });
-        ((ImageButton) findViewById(R.id.imageButtonYangdiDiaocha)).setOnClickListener(new View.OnClickListener() { // from class:  com.xzy.forestSystem.gogisapi.Toolbar.MapCompLayoutToolbar.15
-            @Override // android.view.View.OnClickListener
-            public void onClick(View arg0) {
-                new XiaoBanYangDiQuery_Dialog().ShowDialog();
-            }
-        });
+        initialForm();
+        BindEvent(R.id.imageButtonLayers,GetViewClick());
+
     }
 
 
@@ -501,10 +311,10 @@ public class MainActivity extends Activity {
         pCallback.OnClick("更新顶部工具栏显示", null);
         pCallback.OnClick("更新比例尺显示", null);
         boolean tmpBool = false;
-        HashMap<String, String> tempHashMap = PubVar._PubCommand.m_UserConfigDB.GetUserParam().GetUserPara("Tag_System_MainToolbar_Visible");
-        if (!(tempHashMap == null || (tmpStr = tempHashMap.get("F2")) == null || tmpStr.equals(""))) {
-            tmpBool = Boolean.parseBoolean(tmpStr);
-        }
+//        HashMap<String, String> tempHashMap = PubVar._PubCommand.m_UserConfigDB.GetUserParam().GetUserPara("Tag_System_MainToolbar_Visible");
+//        if (!(tempHashMap == null || (tmpStr = tempHashMap.get("F2")) == null || tmpStr.equals(""))) {
+//            tmpBool = Boolean.parseBoolean(tmpStr);
+//        }
         pCallback.OnClick("更新主菜单显示", Boolean.valueOf(tmpBool));
     }
 
@@ -577,7 +387,8 @@ public class MainActivity extends Activity {
 
         @Override // android.view.View.OnClickListener
         public void onClick(View paramView) {
-            PubVar._PubCommand.ProcessCommand(paramView.getTag().toString());
+            Log.e("TAG",paramView.getTag().toString()+"=====");
+//            PubVar._PubCommand.ProcessCommand(paramView.getTag().toString());
         }
     }
 }
